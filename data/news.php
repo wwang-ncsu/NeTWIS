@@ -24,6 +24,11 @@ return [
     'html' => 'Congratulations on Teng Fei who has successfully passed his Ph.D. prelim exam!'
   ],
   [
+'date' => '2024-05',
+    'date_display' => 'May, 2024',
+    'html' => 'Congratulations to Mengning Li on the Best Paper Award at IEEE INFOCOM 2026!'
+  ],
+    [
 'date' => '2024-04-06',
     'date_display' => 'April, 2024',
     'html' => 'Congratulations to Mengning Li for winning the first prize in the ECE 3-Minute Research Rally with her research on "Hybrid Zone: Bridging Acoustic and Wi-Fi for Enhanced Gesture Recognition"!'

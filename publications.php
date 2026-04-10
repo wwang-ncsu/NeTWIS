@@ -15,7 +15,6 @@
 
 <div class="publications">
   <h2>Publications</h2>
-  <p>Mengning Li's 2026 paper will be added here once the paper details are provided.</p>
 
   <div class="tabs">
     <!-- Tab 1: Selected -->

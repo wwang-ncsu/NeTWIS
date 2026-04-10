@@ -33,8 +33,12 @@ Mengning Li and Wenye Wang, "Synergizing Acoustic and Wi-Fi Signals for Device-F
     <h4>Subsurface Wireless Agricultural Monitoring Platform</h4>
   <div class="research-content">
     <ul>
-      <li>Mengning</li>
+      <li>Subsurface wireless agricultural sensing is a promising direction for precision agriculture, enabling non-invasive monitoring of crop growth and underground conditions without destructive sampling. Our SWAMP work focuses on developing a practical wireless platform for subsurface agricultural monitoring using commodity radio-frequency measurements. In particular, we study how wideband channel frequency response (CFR) sweeps and LTE link-quality indicators can be jointly leveraged to support growth-stage inference, underground localization, and auxiliary soil-condition sensing. Our goal is to build a low-cost and deployable system that can i) provide repeatable sensing measurements without specialized high-end instrumentation, ii) support interpretable feature extraction and constrained inference for below-ground crop monitoring, and iii) enable practical agricultural sensing workflows in greenhouse and controlled soil-diverse environments.</li>
     </ul>
+    <h2>Publications</h2>
+    <p class="publication-item">
+      Mengning Li, Teng Fei and Wenye Wang,"SWAMP: A Subsurface Wireless Agricultural Monitoring Platform," submitted to ACM MobiCom, 2026.
+    </p>
     <button class="collapse-button"><span data-icon=""> Collapse</span></button>
   </div>
     <h4>Dashboard Freezing</h4>
