@@ -6,7 +6,7 @@ return [
   [
 'date' => '2026-05-01',
     'date_display' => 'December, 2026',
-    'html' => 'Congratulations to Mengning Li on the Best Paper Award at IEEE INFOCOM 2026!'
+    'html' => 'Congratulations to Mengning Li on the Best Paper Award at IEEE INFOCOM 2026 for "UNI-FI: Integrated Multi-Task Wi-Fi Sensing"! <a href="https://infocom2026.ieee-infocom.org/awards/awards" target="_blank" rel="noopener">Award link</a>'
   ],
   [
 'date' => '2025-12-09',
@@ -21,12 +21,12 @@ return [
   [
 'date' => '2025-10-21',
     'date_display' => 'October, 2025',
-    'html' => 'Congratulations on Teng Fei who has successfully passed his Ph.D. prelim exam!'
+    'html' => 'Congratulations on Teng Fei who has successfully passed his Ph.D. prelim exam on "From Vulnerability to Usability: Practical Implications and Emerging Applications of Radio Access and RF Signals." Congratulations!'
   ],
   [
 'date' => '2024-05',
     'date_display' => 'May, 2024',
-    'html' => 'Congratulations to Mengning Li on the Best Paper Award at IEEE INFOCOM 2026!'
+    'html' => 'Congratulations to Mengning Li on the Best Paper Award at IEEE INFOCOM 2024 for "Hybrid Zone: Bridging Acoustic and Wi-Fi for Enhanced Gesture Recognition"! <a href="https://infocom2024.ieee-infocom.org/awards" target="_blank" rel="noopener">Award link</a>'
   ],
     [
 'date' => '2024-04-06',

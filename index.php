@@ -2,7 +2,10 @@
   $page_title = "NetWIS Lab";
   $page_desc  = "The Networking of Wireless Information Systems, NetWIS, laboratory led by Dr. Wenye Wang...";
   $active     = "home";
+  require_once __DIR__ . '/lib/pubs.php';
   require __DIR__ . '/partials/header.php';
+
+  $latest_pubs = pubs_latest(pubs_load_all(), 5);
 ?>
 
 <div id="home">
@@ -39,30 +42,20 @@
   <div class="latest-publications">
     <h2 class="with-icon" data-icon="">Latest Publications</h2>
     <ul>
+      <?php foreach ($latest_pubs as $pub): ?>
+        <?php
+          $title = htmlspecialchars(pubs_clean_text((string)$pub['title']));
+          $authors = htmlspecialchars(pubs_clean_text((string)$pub['authors']));
+          $venue = htmlspecialchars(pubs_clean_text((string)$pub['venue']));
+          $href = !empty($pub['link']) ? htmlspecialchars($pub['link']) : '#';
+        ?>
       <li>
-        <a href="https://research.ece.ncsu.edu/netwis2/papers/Competing_Epidemics_on_Graphs_-_Global_Convergence_and_Coexistence.pdf" target="_blank">
-          <h3 class="title">Competing Epidemics on Graphs - Global Convergence and Coexistence</h3>
+        <a href="<?= $href ?>" target="_blank">
+          <h3 class="title"><?= $title ?></h3>
         </a>
-        <p>Vishwaraj Doshi, Shailaja Mallick, and Do Young Eun, 2020 IEEE Global Communications Conference (GLOBECOM), IEEE INFOCOM, May 2021</p>
+        <p><?= $authors ?>, <?= $venue ?></p>
       </li>
-      <li>
-        <a href="https://research.ece.ncsu.edu/netwis2/papers/21RW-GC.pdf" target="_blank">
-          <h3 class="title">Temporal and Spectral Analysis of Spectrum Hole Distributions in an LTE Cell</h3>
-        </a>
-        <p>Vishwaraj Doshi, Shailaja Mallick, and Do Young Eun, 2021 IEEE GLOBECOM, Madrid, Spain, Dec 2021</p>
-      </li>
-      <li>
-        <a href="" target="_blank">
-          <h3 class="title">Opportunistic Spectrum Access: Does Maximizing Throughput Minimize File Transfer Time?</h3>
-        </a>
-        <p>R. Zou, W. Wang, and H. Dai, WiOpt, Oct. 2021</p>
-      </li>
-      <li>
-        <a href="https://research.ece.ncsu.edu/netwis2/papers/Differential_Privacy_and_Prediction_Uncertainty_of_Gossip_Protocols_in_General_Networks.pdf" target="_blank">
-          <h3 class="title">Differential Privacy and Prediction Uncertainty of Gossip Protocols in General Networks</h3>
-        </a>
-        <p>Y. Huang, R. Jin, and H. Dai, 2020 IEEE GLOBECOM, Taipei, Taiwan, Dec. 2020</p>
-      </li>
+      <?php endforeach; ?>
     </ul>
   </div>
 </div> <!-- end #home -->

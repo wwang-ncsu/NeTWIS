@@ -10,11 +10,9 @@
 <h2>Projects</h2>
 <ul>
 
-<li><h3><a href="NSF-30134.html" target="_self">ICoNS: Non-Invasive Detection and Measurements of Underground Tuber
-Plants with Radio-Frequency Signals and Stereo Imaging</a><p>Sponsor: Institute of
-Connected Sensor-Systems<br/>Duration: July 2024 - June 2026<br/>PI(s): Dr. Wenye Wang, Dr. Ruozhou Yu (Stony Brook) and Dr. Lirong Xiang (Cornell)</p></h3></li>
+<li><h3><a href="NSF-30134.html" target="_self">NC State University, "Non-Invasive Detection and Management of Underground Tuber Plants with Radio-Frequency Signals and Stereo Imaging."</a><p>Sponsor: iConS - Institute for Connected Sensor Systems<br/>Duration: July 2024 - June 2026<br/>PI(s): Dr. Wenye Wang, Dr. Ruozhou Yu, and Dr. Lirong Xiang (Cornell)</p></h3></li>
 
-<li><h3>Collaborative Research: SWIFT: LARGE: MAC-on-MAC: A Spectrum Orchestrating Control Plane for Coexisting Wireless Systems</h3><p>Sponsor: National Science Foundation - NeTS Core Program<br/>Duration: january 2021 - December 2024<br/>PI(s): Dr. Wenye Wang, Dr. Xin Wang (Stony Brook), Dr. Janise McNair (University of Florida), and Dr. Soumyajit Mandal (University of Florida)</p></li>
+<li><h3>Collaborative Research: SWIFT: LARGE: MAC-on-MAC: A Spectrum Orchestrating Control Plane for Coexisting Wireless Systems</h3><p>Sponsor: National Science Foundation - NeTS Core Program<br/>Duration: January 2021 - December 2025<br/>PI(s): Dr. Wenye Wang, Dr. Xin Wang (Stony Brook), Dr. Janise McNair (University of Florida), and Dr. Soumyajit Mandal (University of Florida)</p></li>
 
 <li><h3>SpecEES: Efficient Monitoring and Spectrum Utilization of Multi-Layer Wireless Networks</h3><p>Sponsor: National Science Foundation - NeTS Core Program<br/>Duration: October 2018 - September 2021<br/>PI(s): Dr. Wenye Wang, Dr. Do Young Eun, and Dr. Huaiyu Dai</p></li>
 
