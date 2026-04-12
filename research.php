@@ -19,7 +19,7 @@
   <ul>
     <li><a href="<?= $BASE_URL ?>/wireless_convergence_cps_applications.php">Wireless Convergence and CPS Applications</a></li>
     <li><a href="<?= $BASE_URL ?>/spectrum_access_surveillance.php">Spectrum Access Surveillance</a></li>
-    <li><a href="<?= $BASE_URL ?>/mobility_induced_performance_modeling.php">Mobility Induced and Performance Modeling</a></li>
+    <li><a href="<?= $BASE_URL ?>/mobility_induced_performance_modeling.php">Mobility-Induced and Performance Modeling</a></li>
   </ul>
 </div>
 

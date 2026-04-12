@@ -24,7 +24,7 @@
           <li><a href="<?= $BASE_URL ?>/research.php">Overview</a></li>
           <li><a href="<?= $BASE_URL ?>/wireless_convergence_cps_applications.php">Wireless Convergence and CPS Applications</a></li>
           <li><a href="<?= $BASE_URL ?>/spectrum_access_surveillance.php">Spectrum Access Surveillance</a></li>
-          <li><a href="<?= $BASE_URL ?>/mobility_induced_performance_modeling.php">Mobility Induced and Performance Modeling</a></li>
+          <li><a href="<?= $BASE_URL ?>/mobility_induced_performance_modeling.php">Mobility-Induced and Performance Modeling</a></li>
         </ul>
       </div>
 
@@ -37,20 +37,22 @@
         </a>
       </div>
 
-      <!-- Downloads -->
+      <!-- Datasets -->
       <div class="menu__item" style="position: relative;">
-        <a href="<?= $BASE_URL ?>/downloads.php" class="">
+        <a href="<?= $BASE_URL ?>/datasets.php" class="">
           <div class="circle"><div class="circle__content">
-            <span class="menu-icon" data-icon=""><br></span><span class="menu-text">Downloads</span>
+            <span class="menu-icon" data-icon=""><br></span><span class="menu-text">Datasets</span>
           </div></div>
         </a>
+        <?php /*
         <ul class="sub-menu">
-          <li><a href="<?= $BASE_URL ?>/downloads.php">Overview</a></li>
+          <li><a href="<?= $BASE_URL ?>/datasets.php">Overview</a></li>
           <li><a href="<?= $BASE_URL ?>/mobility_model.php">Mobility Model</a></li>
           <li><a href="<?= $BASE_URL ?>/step2_wlans.php">STEP2 in WLANs</a></li>
           <li><a href="<?= $BASE_URL ?>/sensor_networks.php">Sensor Networks</a></li>
           <li><a href="<?= $BASE_URL ?>/multihop_networks.php">Multihop Networks</a></li>
         </ul>
+        */ ?>
       </div>
 
       <!-- Projects -->
@@ -85,10 +87,10 @@
     <div class="side-info side-info--aside">
       <div class="logo">
         <a href="http://www.ece.ncsu.edu/" target="_blank" style="font-size:16px;color:rgb(189,0,0);position:relative;top:15px;right:-5px;">
-          <img src="<?= asset('22-07NetWis%20Lab_files/ece.png') ?>">
+          <img src="<?= asset('2207NetWisLabfiles/ece.png') ?>" alt="NC State ECE">
         </a>&nbsp;
         <a href="http://www.ncsu.edu/" target="_blank">
-          <img src="<?= asset('22-07NetWis%20Lab_files/wolfpack1.png') ?>">
+          <img src="<?= asset('2207NetWisLabfiles/wolfpack1.png') ?>" alt="NC State University Wolfpack logo">
         </a>
       </div>
     </div>
@@ -103,7 +105,7 @@
         
         $news = require __DIR__ . '/../data/news.php';
         usort($news, function($a, $b) { return strcmp($b['date'], $a['date']); });
-        $top2 = array_slice($news, 0, 2);
+        $top2 = array_slice($news, 0, 8);
       ?>
 
       <?php if (empty($top2)): ?>
@@ -142,3 +144,4 @@
 <!-- footer loaded -->
 </body>
 </html>
+

@@ -49,6 +49,22 @@ function pubs_group_by_area(array $pubs): array {
   return $out;
 }
 
+function pubs_clean_text(string $text): string {
+  $text = str_replace(["\r", "\n"], ' ', $text);
+  $text = preg_replace('/^\s*,\s*"?\s*/', '', $text);
+  $text = preg_replace('/\s+/', ' ', $text);
+  $text = preg_replace('/\s+([,.;:])/', '$1', $text);
+  $text = preg_replace('/\bpdf\b\.?/i', '', $text);
+  $text = preg_replace('/\s{2,}/', ' ', $text);
+  $text = trim($text);
+  $text = rtrim($text, " \t\n\r\0\x0B.,;");
+  return $text;
+}
+
+function pubs_latest(array $pubs, int $count = 5): array {
+  return array_slice($pubs, 0, max(0, $count));
+}
+
 
 function pubs_render_paragraphs(array $pubs, string $prefix = 'P'): string {
   if (empty($pubs)) return '<div class="publications"><p>No publications yet.</p></div>';
@@ -62,9 +78,9 @@ function pubs_render_paragraphs(array $pubs, string $prefix = 'P'): string {
     $num = preg_replace('~^(?:jp|cp|bp|wp)-?~i', '', (string)$p['id']); 
     $label = $num ? "[{$badge}-{$num}]" : "[{$badge}]";
 
-    $title = htmlspecialchars($p['title']);
-    $authors = htmlspecialchars($p['authors']);
-    $venue = htmlspecialchars($p['venue']);
+    $title = htmlspecialchars(pubs_clean_text((string)$p['title']));
+    $authors = htmlspecialchars(pubs_clean_text((string)$p['authors']));
+    $venue = htmlspecialchars(pubs_clean_text((string)$p['venue']));
     $extra = trim($p['extra'] ?? '');
     $doc = '';
     if (!empty($p['link'])) {

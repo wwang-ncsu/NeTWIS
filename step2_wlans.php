@@ -1,8 +1,8 @@
 <?php
   // people.php
-  $page_title = "Downloads â€“ NetWIS Lab";
-  $page_desc  = "Downalods - Step 2";
-  $active     = "Downloads";
+  $page_title = "Datasets – NetWIS Lab";
+  $page_desc  = "Datasets - Step 2";
+  $active     = "Datasets";
   require __DIR__ . '/partials/header.php';
 ?>
 

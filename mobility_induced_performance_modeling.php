@@ -1,15 +1,18 @@
 
 <?php
-  $page_title = "Mobility Induced and Performance Modeling - NetWIS Lab";
-  $page_desc  = "Research on mobility induced and performance modeling.";
+  $page_title = "Mobility-Induced and Performance Modeling - NetWIS Lab";
+  $page_desc  = "Research on mobility-induced and performance modeling.";
   require __DIR__ . '/partials/header.php';
 ?>
 
 
     <div class="expandable_naration">
-      <h2>Mobility Induced and Performance Modeling</h2>
+      <h2>Mobility-Induced and Performance Modeling</h2>
       <p>
-        Current projects in this direction focus on mobility induced and performance modeling.
+        Mobility-induced dynamics are fundamental to the design, analysis, and dependable operation of wireless mobile systems. Our research in this area studies how node behaviors, topology evolution, link and path variability, and user mobility jointly shape network performance, reliability, and service availability in multihop and mobile networks. By developing analytical models and data-driven characterizations, we seek to better understand how mobility and uncertainty affect connectivity, routing, topology control, and overall system behavior.
+      </p>
+      <p>
+        This line of work spans four tightly connected directions: node behavior and network topology, link and path dynamics in multihop networks, mobility modeling and characterization, and vulnerability, resilience, and robustness in mobile systems. Together, these efforts support the design of wireless networks that are not only efficient under mobility, but also resilient to failures, misbehavior, and adversarial disruptions.
       </p>
 
       <h4>Node Behavior and Network Topology</h4>
@@ -60,11 +63,25 @@
     </p>
         <button class="collapse-button"><span data-icon=""> Collapse</span></button>
       </div>
-      <h4>Vulneribility, reseilience and robustness</h4>
+      <h4>Vulnerability, Resilience and Robustness</h4>
       <div class="research-content">
         <ul>
-          <li></li>
+          <li>Our recent work in this direction examines how vulnerabilities, resilience, and robustness emerge in mobile and wireless systems when protocol weaknesses, user-facing security mechanisms, and adversarial mobility behaviors interact with network performance. We study authentication flaws in LTE/5G access, identity spoofing and denial-of-service attacks in LTE networks, permission authorization risks in mobile platforms, and attack dynamics in vehicular networks under evacuation scenarios.</li>
+          <li>By combining protocol analysis, attack implementation, measurement, and performance modeling, these efforts aim to understand how practical threats propagate through communication systems and to identify design enhancements that improve service continuity, trustworthiness, and robustness in next-generation mobile networks.</li>
         </ul>
+        <h2>Publications</h2>
+        <p class="publication-item">
+          Teng Fei and Wenye Wang, "The Vulnerability and Enhancement of AKA Protocol for Mobile Authentication in LTE/5G Networks," IEEE Transactions on Wireless Communications, vol. 22, no. 11, pp. 8320-8335, 2021.
+        </p>
+        <p class="publication-item">
+          Teng Fei and Wenye Wang, "LTE is Vulnerable: Implementing Identity Spoofing and Denial-of-Service Attacks in LTE Networks," in Proc. of IEEE GLOBECOM, December 2019.
+        </p>
+        <p class="publication-item">
+          Mingkui Wei, Zhuo Lu, and Wenye Wang, "On Modeling and Understanding Vehicle Evacuation Attacks in VANETs," in Proc. of IEEE ICC, June 2017.
+        </p>
+        <p class="publication-item">
+          Mingkui Wei, Xi Gong, and Wenye Wang, "Claim What You Need: A Text-Mining Approach on Android Permission Request Authorization," in Proc. of IEEE GLOBECOM, December 2015.
+        </p>
         <button class="collapse-button"><span data-icon=""> Collapse</span></button>
       </div>
     </div><!-- /.expandable_naration -->

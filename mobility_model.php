@@ -1,8 +1,8 @@
 <?php
   // people.php
-  $page_title = "Downloads â€“ NetWIS Lab";
-  $page_desc  = "Downalods - Mobility Model";
-  $active     = "Downloads";
+  $page_title = "Datasets – NetWIS Lab";
+  $page_desc  = "Datasets - Mobility Model";
+  $active     = "Datasets";
   require __DIR__ . '/partials/header.php';
 ?>
 
@@ -144,4 +144,5 @@
   </div>
 
 <?php require __DIR__ . '/partials/footer.php'; ?>
+
 

@@ -2,6 +2,30 @@
 // data/activities.php
 return [
   [
+    'date' => '2027-05-01',
+    'html' => '2027 - Technical Program Committee (TPC) for IEEE INFOCOM'
+  ],
+  [
+    'date' => '2026-10-01',
+    'html' => '2026 - Technical Program Committee (TPC) for IEEE INFOCOM, IEEE MILCOM-Track 4, and IEEE VTC-Spring (Vehicular Technology Conference)'
+  ],
+  [
+    'date' => '2025-05-01',
+    'html' => '2025 - Technical Program Committee (TPC) for IEEE INFOCOM, IEEE MILCOM-Track 2, IEEE PIMRC-Track 2, IEEE GLOBECOM-MWN, IEEE ICC-CRAIN & MWN, and IEEE WF-IoT'
+  ],
+  [
+    'date' => '2024-09-01',
+    'html' => '2024 - Technical Program Committee (TPC) for IEEE INFOCOM, IEEE MILCOM-Track 2, IEEE PIMRC-Track 2, IEEE GLOBECOM-MWN, IEEE ICC-CRAIN & MWN; IEEE ICC Technical Program Committee, Co-Chair; IEEE SECON Publication Co-Chair; and IEEE World Forum on Internet of Things (WF-IoT) TPC'
+  ],
+  [
+    'date' => '2023-05-01',
+    'html' => '2023 - IEEE INFOCOM, Area Chair'
+  ],
+  [
+    'date' => '2021-05-01',
+    'html' => '2021 - IEEE INFOCOM, Area Chair'
+  ],
+  [
     'date' => '2020-06-01',
     'html' => '2020 - Tutorial Co-Chair, Technical Program Committee, <a href="http://www.comsoc.org/conferences-events" target="_blank">IEEE ICC 2020</a>'
   ],
