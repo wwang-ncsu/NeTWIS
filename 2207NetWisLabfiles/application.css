@@ -1124,6 +1124,8 @@ textarea {
     padding: 0.5em 0.125em 0.125em 0.4375em; }
     .publications p .publication-doc a {
       color: rgba(160, 0, 0, 0.7); }
+  .publications p .publication-doc.publication-doc--missing {
+    color: rgba(120, 120, 120, 0.9); }
 .publications #all-publications .tab-content {
   margin-top: -2.75em; }
 .publications #sorted-publications-by-area .tab-content {

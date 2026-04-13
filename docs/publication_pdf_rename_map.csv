@@ -1,0 +1,138 @@
+old_name,new_name,year,authors,title,source,status
+00wa-mb.pdf,00wa-intersystem.pdf,2000,Wenye Wang and Ian F. Akyildiz,Intersystem Location Update and Paging Schemes for Multitier Wireless Networks,data/publications.php,renamed
+00wa-vtc.pdf,00was-cost.pdf,2000,"Wenye Wang, Ian. F Akyildiz, and Gordon L. Stuber",A Cost Effective Paging Scheme for IMT-2000 Systems,data/publications.php,renamed
+00was-gb.pdf,00was-optimal.pdf,2000,"Wenye Wang, Ian F. Akyildiz, and Gordon L. St¨¹ber",An Optimal Partition Algorithm for Minimization of Paging Costs,data/publications.php,renamed
+00was-wcnc.pdf,00was-reducing.pdf,2000,"Wenye Wang, Ian F. Akyildiz, and Gordon L. St¨¹ber",Reducing the Paging Costs under Delay Bounds for PCS Networks,data/publications.php,renamed
+02wa-gb.pdf,02wa-estimation.pdf,2002,Wenye Wang and Ian F. Akyildiz,On the Estimation of User Mobility Pattern for Location Tracking in Wireless Networks,data/publications.php,renamed
+05LW-COMNET.pdf,05lw-performance.pdf,2005,Wei Liang and Wenye Wang,On Performance Analysis of Challenge/Responds Based Authentication in Wireless Local Area Networks,data/publications.php,renamed
+05LW-INFOCOM.pdf,05lw-quantitative.pdf,2005,"Wei Liang, Wenye Wang",A Quantitative Study of Authentication and QoS in Wireless IP Networks,data/publications.php,renamed
+05WWN-INFOCOM.pdf,05wwn-new.pdf,2005,"Wenye Wang, Xinbing Wang, and Arne Nilsson",A New Admission Control Scheme under Energy and QoS Constraints for Wireless Networks,data/publications.php,renamed
+06aw-milcom.pdf,06aw-dspm.pdf,2006,Avesh K. Agarwal and Wenye Wang,DSPM: Dynamic Security Policy Management for Optimizing Performance in Wireless Networks,data/publications.php,renamed
+06sw-wcmc.pdf,06sw-simulation.pdf,2006,Jungkee Song and Wenye Wang,A Simulation Study of IP-Based Vertical Handoff in Wireless Convergent Networks,data/publications.php,renamed
+06tw-ijsnet.pdf,06tw-tts.pdf,2006,Nurcan Tezcan and Wenye Wang,TTS: A Two-Tiered Scheduling Mechanism for Energy Conservation in Wireless Sensor Networks,data/publications.php,renamed
+06xew-ipccc.pdf,06wew-tcp.pdf,2006,"Xinbing Wang, Do Young Eun, and Wenye Wang",A TCP-Aware Call Admission Control Scheme for Packet-Switched Wireless Networks,data/publications.php,renamed
+06xuw-milcom.pdf,06xw-meaca.pdf,2006,Yi Xu and Wenye Wang,MEACA: Mobility and Energy Aware Clustering Algorithm for Constructing Stable MANETs,data/publications.php,renamed
+06xw-milcom.pdf,06xw-dynamic.pdf,2006,Fei Xing and Wenye Wang,Understanding Dynamic Denial of Service Attacks in Mobile Ad Hoc Networks,data/publications.php,renamed
+06zw-globecom.pdf,06zw-novel.pdf,2006,Ming Zhao and Wenye Wang,A Novel Semi-Markov Smooth Mobility Model for Mobile Ad Hoc Networks,data/publications.php,renamed
+06zw-milcom.pdf,06zw-design.pdf,2006,Ming Zhao and Wenye Wang,Design and Applications of A Smooth Mobility Model for Mobile Ad Hoc Networks,data/publications.php,renamed
+07aw-monet.pdf,07aw-impact.pdf,2007,Avesh K. Agarwal and Wenye Wang,On the Impact of Quality of Protection in Wireless Local Area Networks with IP Mobility,data/publications.php,renamed
+07awg-milcom.pdf,07awg-lap.pdf,2007,"Avesh K. Agarwal, Wenye Wang, Rachana Gupta, and Mo-Yuen Chow",LAP: Link-Aware Protection for Improving Performance of Loss and Delay Sensitive Applications in Wireless LANs,data/publications.php,renamed
+07sw-wcnc.pdf,07kw-computing.pdf,2007,Shawqi Kharbash and Wenye Wang,Computing Two-Terminal Reliability in Mobile Ad hoc Networks,data/publications.php,renamed
+07tw-coverage-wcnc.pdf,07tw-effective.pdf,2007,Nurcan Tezcan and Wenye Wang,Effective Coverage and connectivity Preserving in Heterogeneous Sensor Networks,data/publications.php,renamed
+07tw-ijsnet.pdf,07tw-art.pdf,2007,Nurcan Tezcan and Wenye Wang,ART: An Asymmetric and Reliable Transport Mechanism for Wireless Sensor Networks,data/publications.php,renamed
+07tw-reliable-wcnc.pdf,07tw-distributed.pdf,2007,Nurcan Tezcan and Wenye Wang,Distributed Coordination of Sensors for End-to-End Reliable Event and Query Delivery,data/publications.php,renamed
+07wew-twc.pdf,07wew-dynamic.pdf,2007,"Xinbing Wang, Do Young Eun, and Wenye Wang",A Dynamic TCP-Aware Call Admission Control Scheme for Next Generation Wireless Communications,data/publications.php,renamed
+07xingw-gc.pdf,07xw-expected.pdf,2007,Fei Xing and Wenye Wang,On the Expected Connection Lifetime and Stochastic Resilience of Wireless Multihop Networks,data/publications.php,renamed
+07xuw-gc.pdf,07xw-stability.pdf,2007,Yi Xu and Wenye Wang,Stability of Hierarchical Mobile Ad Hoc Networks,data/publications.php,renamed
+07xw-milcom.pdf,07xw-detecting.pdf,2007,Yi Xu and Wenye Wang,Detecting and Mitigating DoS Attacks in Wireless Networks without Affecting the Normal Behaving Nodes,data/publications.php,renamed
+07xw-net.pdf,07xw-resilient.pdf,2007,Fei Xing and Wenye Wang,On the Resilient Overlay Topology Formation in Multi-hop Wireless Networks,data/publications.php,renamed
+07xw-wcnc.pdf,07xw-analyzing.pdf,2007,Fei Xing and Wenye wang,Analyzing Resilience to Node Misbehaviors in Wireless Multihop Networks,data/publications.php,renamed
+07zw-gc.pdf,07zw-impacts.pdf,2007,Ming Zhao and Wenye Wang,The Impacts of Radio Channels and Node Mobility on Link Statistics in Mobile Ad Hoc Networks,data/publications.php,renamed
+07zw-wcnc.pdf,07zw-analyzing.pdf,2007,Ming Zhao and Wenye Wang,Analyzing Topology Dynamics in Ad Hoc Networks Using a Smooth Mobility Model,data/publications.php,renamed
+08tw-comnet.pdf,08tw-self.pdf,2008,Nurcan Tezcan and Wenye Wang,Self-Orienting Wireless Multimedia Sensor Networks for Occlusion-Free Viewpoints,data/publications.php,renamed
+08tw-icc.pdf,08tw-self-2.pdf,2008,Nurcan Tezcan and Wenye Wang,Self-Orienting Wireless Multimedia Sensor Networks for Maximizing Multimedia Coverage,data/publications.php,renamed
+08wz-info.pdf,08wz-joint.pdf,2008,Wenye Wang and Ming Zhao,Joint Effects of Radio Channels and Node Mobility on Link Dynamics in Wireless Networks,data/publications.php,renamed
+08xingw-icc.pdf,08xw-devolution.pdf,2008,Fei Xing and Wenye Wang,On the Devolution of Large-scale Sensor Networks in the Presence of Random Failures,data/publications.php,renamed
+08xuw-icc.pdf,08xw-finding.pdf,2008,Yi Xu and Wenye Wang,Finding the Fastest Path in Wireless Networks,data/publications.php,renamed
+08xw-info.pdf,08xw-speed.pdf,2008,Yi Xu and Wenye Wang,The Speed of Information Propagation in Large Wireless Networks,data/publications.php,renamed
+08xw-mc.pdf,08xw-critical.pdf,2008,Fei Xing and Wenye Wang,On the Critical Phase Transition Time of Wireless Multi-hop Networks with Random Failures,data/publications.php,renamed
+08zmw-milcom.pdf,08zmw-empirical.pdf,2008,"Ming Zhao, Levi Mason, and Wenye Wang",Empirical Study on Human Mobility for Wireless Mobile Networks,data/publications.php,renamed
+09xw-mc.pdf,09xw-scheduling.pdf,2009,Yi Xu and Wenye Wang,Scheduling Partitioning for Order Optimal Capacity in Large-Scale Wireelss Networks,data/publications.php,renamed
+09xw-TDSC.pdf,10xw-survivability.pdf,2010,Fei Xing and Wenye Wang,On the Survivability of Wireless Ad Hoc Networks with Node Misbehaviors and Failures,data/publications.php,renamed
+09xw-tvt.pdf,09xw-topology.pdf,2009,Yi Xu and Wenye Wang,Topology Stability Analysis and its Application in Hierarchical Mobile Ad Hoc Networks,data/publications.php,renamed
+09zw-winet.pdf,09zw-unified.pdf,2009,Ming Zhao and Wenye Wang,A Unified Mobility Model for Analysis and Simulation of Mobile Wireless Networks,data/publications.php,renamed
+10185834.pdf,,,,,unmatched,skipped
+10aw-monet.pdf,10aw-experimental.pdf,2010,Avesh K. Agarwal and Wenye Wang,An Experimental Study of the Performance Impact of Path-based DoS Attacks in Wireless Mesh Networks,data/publications.php,renamed
+10lw-mil.pdf,10lww-review.pdf,2010,"Zhuo Lu, Wenye Wang, and Cliff Wang",Review and Evaluation of Security Threats on the Communication Networks in the SmartGrid,data/publications.php,renamed
+10xw-IF.pdf,10xw-characterizing.pdf,2010,Yi Xu and Wenye Wang,Characterizing the Spread of Correlated Failures in Large Wireless Networks,data/publications.php,renamed
+10yw-IF.pdf,10yw-connectivity.pdf,2010,Chi Yi and Wenye Wang,On the Connectivity Analysis over Large-Scale Hybrid Wireless Networks,data/publications.php,renamed
+11llw-GB.pdf,11llw-network.pdf,2011,Xiang Lu and Zhuo Lu and Wenye Wang and Jianfeng Ma,On Network Performance Evaluation toward the Smart Grid: A Case Study of DNP3 over TCP/IP,data/publications.php,renamed
+11lwl-milcom.pdf,11lwl-security.pdf,2011,Xiang Lu and Wenye Wang and Zhuo Lu and Jianfeng Ma,From Security to Vulnerability: Data Authentication Undermines Message Delivery in Smart Grid,data/publications.php,renamed
+11lww-info.pdf,11lw-jammer.pdf,2011,Zhuo Lu and Wenye Wang,From Jammer to Gambler: Modeling and Detection of Jamming Attacks against Time-Critical Traffic,data/publications.php,renamed
+11lzw-GB.pdf,11lzw-intermittent.pdf,2011,"Yujin Li, Ming Zhao, and Wenye Wang",Intermittent Connected Vehicle-to-Vehicle Networks: Detection and Analysis,data/publications.php,renamed
+11sw-info.pdf,11sw-distribution.pdf,2011,Lei Sun and Wenye Wang,On Distribution and Limits of Information Dissemination Latency and Speed In Mobile Cognitive Radio Networks,data/publications.php,renamed
+11wxk-comnet.pdf,11wxk-survey.pdf,2011,"Wenye Wang, Yi Xu, and Mohit Khanna",A survey on the communication architectures in smart grid,data/publications.php,renamed
+11xuw-icc.pdf,11xw-speed.pdf,2011,Yi Xu and Wenye Wang,"The Speed Bounds on Event Reporting in Mobile Sensor Networks with Energy Constraints,",data/publications.php,renamed
+11xw-comnet.pdf,11xw-robust.pdf,2011,Fei Xing and Wenye Wang,Toward Robust Multi-hop Data Forwarding in Large Scale Wireless Network,data/publications.php,renamed
+11xw-info.pdf,11xw-information.pdf,2011,Yi Xu and Wenye Wang,Information Delivery in Large Wireless Networks with Minimum Energy Expense,data/publications.php,renamed
+11xw-ton.pdf,11xw-limit.pdf,2011,Yi Xu and Wenye Wang,The Limit of Information Propagation Speed in Large-Scale Multi-Hop Wireless Networks,data/publications.php,renamed
+11xzw-SG.pdf,11xzw-energy.pdf,2011,"Yi Xu, Jianhua Zhang, Wenye Wang, Avik Juneja, and Subhashish Bhattacharya",Energy Router: Architectures and Functionalities toward Energy Internet,data/publications.php,renamed
+12lwd-GB.pdf,12lwd-latency.pdf,2012,"Yujin Li, Wenye Wang, and Alexandra Duel-Hallen",The Latency of Gaining $\alpha$-Reliability for Message Dissemination in Vehicle-to-Vehicle Networks,data/publications.php,renamed
+12lwm-IJDSN.pdf,12lwm-authentication.pdf,2012,"Xiang Lu, Wenye Wang and Jianfeng Ma",Authentication and Integrity in the Smart Grid: An Empirical Study in Substation Automation Systems,data/publications.php,renamed
+12lww-IF.pdf,12lww-hiding.pdf,2012,"Zhuo Lu, Wenye Wang, and Cliff Wang",Hiding Traffic with Camouflage: Minimizing Message Delay in the Smart Grid under Jamming,data/publications.php,renamed
+12sw-IF1.pdf,12sw-tempo.pdf,2012,Lei Sun and Wenye Wang,Understanding the Tempo-spatial Limits of Information Dissemination in Multi-channel Cognitive Radio Networks,data/publications.php,renamed
+12sw-IF2.pdf,13sw-blackholes.pdf,2013,Lei Sun and Wenye Wang,Understanding Blackholes in Large-Scale Cognitive Radio Networks Under Generic Failures,data/publications.php,renamed
+12ZLW-TCOM.pdf,12zlw-modeling.pdf,2012,"Ming Zhao, Yujin Li, and Wenye Wang",Modeling and Analytical Study of Link Properties in Multihop Wireless Networks,data/publications.php,renamed
+13LW-GB.pdf,13lw-unheralded.pdf,2013,Yujin Li and Wenye Wang,The Unheralded Power of Cloudlet Computing in the Vicinity of Mobile Devices,data/publications.php,renamed
+13lw-IF.pdf,13lw-horizon.pdf,2013,Yujin Li and Wenye Wang,Horizon on the Move: Geocast in Intermittently Connected Vehicular Ad Hoc Networks,data/publications.php,renamed
+13LWM-SG.pdf,13lwm-domino.pdf,2013,"Xiang Lu, Wenye Wang, Jianfeng Ma, and Limin Sun",Domino of the Smart Grid: An Empirical Study of System Behaviors in the Interdependent Network Architecture,data/publications.php,renamed
+13lwm-TSG.pdf,13lwm-empirical.pdf,2013,"Xiang Lu, Wenye Wang and Jianfeng Ma","An Empirical Study of Communication Infrastructure towards the Smart Grid: Design, Implementation, and Evaluation",data/publications.php,renamed
+13lzw-TVT.pdf,13xw-wireless.pdf,2013,Yi Xu and Wenye Wang,Wireless in Smart Grid: Modeling and Analysis for Time Critical Communications,data/publications.php,renamed
+13SW-GB.pdf,13sw-topology.pdf,2013,Lei Sun and Wenye Wang,Understanding Topology Dynamics in Large-Scale Cognitive Radio Networks under Generic Failures,data/publications.php,renamed
+13wl-comnet.pdf,13lw-cyber.pdf,2013,Zhuo Lu and Wenye Wang,Cyber Security in the Smart Grid: Survey and Challenges,data/publications.php,renamed
+13WW-GB.pdf,13ww-distributed.pdf,2013,Mingkui Wei and Wenye Wang,Toward Distributed Intelligent: A Case Study of Peer to Peer Communication in Smart Grid,data/publications.php,renamed
+13xw-tmc.pdf,13xw-scheduling.pdf,2013,Yi Xu and Wenye Wang,Scheduling Partition for Order Optimal Capacity in Large-Scale Wireless Networks,data/publications.php,renamed
+14LSW-ICC.pdf,14lsw-exploring.pdf,2014,"Yujin Li, Lei Sun, and Wenye Wang",Exploring Device-to-Device Communication for Mobile Cloud Computing,data/publications.php,renamed
+14LW-Info.pdf,14lw-mobile.pdf,2014,Yujin Li and Wenye Wang,Can Mobile Cloudlets Support Mobile Applications,data/publications.php,renamed
+14LWW-Info.pdf,14lww-botnets.pdf,2014,"Zhuo Lu, Wenye Wang, and Cliff Wang",How Can Botnets Cause Storms? Understanding the Evolution and Impact of Mobile Botnets,data/publications.php,renamed
+14lww-TMC.pdf,14lww-modeling.pdf,2014,"Zhuo Lu, Wenye Wang, and Cliff Wang","Modeling, Evaluation and Detection of Jamming Attacks against Time-Critical Messages over Wireless in Smart Grid",data/publications.php,renamed
+14PW-ICC.pdf,14pw-boundary.pdf,2014,Sigit Aryo Pambudi and Wenye Wang,Boundary Matters: Impact of Finite Boundary to Packet Delay Performance in Mobile Data Networks,data/publications.php,renamed
+14WW-Info.pdf,14ww-greenbench.pdf,2014,Mingkui Wei and Wenye Wang,Greenbench: A Benchmark for Observing Power Grid Vulnerability Under Data-Centric Threats,data/publications.php,renamed
+15lww-TDSC.pdf,15lww-camouflage.pdf,2015,"Zhuo Lu, Wenye Wang, and Cliff Wang",Camouflage Traffic: Minimizing Message Delay for Smart Grid Applications under Jamming,data/publications.php,renamed
+15LWW-TMC.pdf,15lww-evolution.pdf,2015,"Zhuo Lu, Wenye Wang, and Cliff Wang",On the Evolution and Impact of Mobile Botnets in Wireless Networks,data/publications.php,renamed
+15swl-TMC.pdf,15swl-impact.pdf,2015,"Lei Sun, Wenye Wang, and Yujin Li",The Impact of Network Size and Mobility on Information Delivery in Cognitive Radio Networks,data/publications.php,renamed
+15swl-TWC.pdf,15swl-topology.pdf,2015,"Lei Sun, Wenye Wang, and Zhuo Lu",On Topology and Resilience of Large-Scale Cognitive Radio Networks Under Generic Failures,data/publications.php,renamed
+16PWW-gc-R.pdf,16pww-robust.pdf,2016,"Sigit Pambudi, Wenye Wang, and Cliff Wang",How Robust Is A D2D-Based Messaging Service?,data/publications.php,renamed
+16PWW-gc-S.pdf,16pww-resilience.pdf,2016,"Sigit Pambudi, Wenye Wang, and Cliff Wang",On The Resilience of D2D-based Social Networking Service Against Random Failures,data/publications.php,renamed
+16SW-ICC.pdf,16pw-modeling.pdf,2016,Sigit Pambudi and Wenye Wang,Modeling and Estimating the Structure of D2D-Based Mobile Social Networks,data/publications.php,renamed
+16WeW-comnet.pdf,16ww-data.pdf,2016,Mingkui Wei and Wenye Wang,Data-centric threats and their impacts to real-time communications in smart grid,data/publications.php,renamed
+16WeW-ICC.pdf,16ww-dominoes.pdf,2016,Mingkui Wei and Wenye Wang,Dominoes with Communications: On Characterizing the Progress of Cascading Failures in Smart Grid,data/publications.php,renamed
+16WLW-gc.pdf,16wlw-locality.pdf,2016,"Yali Wang, Yujin Li, Wenye Wang, Mei Song",A Locality-based Mobile Caching Policy for D2D-based Content Sharing Network,data/publications.php,renamed
+16WW-IF-2455.pdf,16ww-live.pdf,2016,Jie Wang and Wenye Wang,To Live or To Die: Encoutering Conflict Information Propagation over Simple Networks,data/publications.php,renamed
+16WWW-gc.pdf,16www-divide.pdf,2016,"Jie Wang, Wenye Wang, and Cliff Wang",Divide and Conquer: Leveraging Topology in Control of Epidemic Information Dynamics,data/publications.php,renamed
+16WWW-ICC.pdf,16www-anti.pdf,2016,"Jie Wang, Wenye Wang, and Cliff Wang",How the Anti-Rumor Kills the Rumor: Conflicting Information Propagation in Networks,data/publications.php,renamed
+17HWW-GB.pdf,17hww-detection.pdf,2017,"Seyyedali Hosseinalipour, Jie Wang, Wenye Wang, and Huaiyu Dai",Detection of Infections using Graph Signal Processing in Heterogeneous Networks,data/publications.php,renamed
+17PWW-GB.pdf,17pww-isolation.pdf,2017,"Sigit Pambudi, Wenye Wang, and Cliff Wang",From Isolation Time to Node Resilience: Impact of Cascades in D2D-based Social Networks,data/publications.php,renamed
+17WLW-SJ.pdf,17wlw-characterizing.pdf,2017,"Mingkui Wei, Zhuo Lu, and Wenye Wang",On Characterizing Information Dissemination During City-Wide Cascading Failures in Smart Grid,data/publications.php,renamed
+17WWL-icc-VANET.pdf,17wlw-modeling.pdf,2017,"Mingkui Wei, Zhuo Lu, and Wenye Wang",On Modeling and Understanding Vehicle Evacuation Attacks in VANETs,data/publications.php,renamed
+18pww-ICCCN.pdf,18pww-aftermath.pdf,2018,"Sigit Pambudi, Jie Wang, Wenye Wang, Min Song, and Xiaoyan Zhu",The Aftermath of Broken Links: Resilience of IoT Systems from A Networking Perspective,data/publications.php,renamed
+18pww-IF.pdf,18pww-fast.pdf,2018,"Sigit Pambudi, Wenye Wang, and Cliff Wang",Fast Rendezvous for Spectrum-Agile IoT Devices with Limited Channel Hopping Capability,data/publications.php,renamed
+18ZW-ICC.pdf,18zw-flow.pdf,2018,Rui Zou and Wenye Wang,A Flow Rule Timeout Assignment Algorithm for SDN-Assisted Network MIMO Systems,data/publications.php,renamed
+19FW-GB.pdf,19fw-lte.pdf,2019,Teng Fei and Wenye Wang,LTE is Vulnerable: Implementing Identity Spoofing and Denial-of-Service Attacks in LTE Networks,data/publications.php,renamed
+19WPW-IoT.pdf,19wpw-resilience.pdf,2019,"Jie Wang, Sigit Pambudi, Wenye Wang, and Min Song",Resilience of IoT Systems Against Edge-induced Cascade-of-Failures: A Networking Perspective,data/publications.php,renamed
+19WWLW-ICC.pdf,19wwl-studying.pdf,2019,"Mingkui Wei, Jie Wang, Zhuo Lu, and Wenye Wang",On Studying Information Dissemination in Social-Physical Interdependent Networks,data/publications.php,renamed
+19WWW-IF.pdf,19www-sas.pdf,2019,"Jie Wang, Wenye Wang, and Cliff Wang",SAS: Modeling and Analysis of Spectrum Activity Surveillance in Wireless Overlay Networks,data/publications.php,renamed
+19ZW-GB.pdf,19zw-change.pdf,2019,Rui Zou and Wenye Wang,Change Detection Based Segmentation and Modeling of LTE Spectrum Tenancy,data/publications.php,renamed
+20JW-TMC.pdf,20www-spectrum.pdf,2020,"Jie Wang, Wenye Wang, Cliff Wang, Min Song",Spectrum Activity Surveillance: Modeling and Analysis from Perspectives of Surveillance Coverage and Culprit Detection,data/publications.php,renamed
+20WWW-ToN.pdf,20www-modeling.pdf,2020,"Jie Wang, Wenye Wang and Cliff Wang",Modeling and Analysis of Conflicting Information Propagation in a Finite Time Horizon.,data/publications.php,renamed
+20ZW-UCIMAN.pdf,20zw-ciman.pdf,2020,Rui Zou and Wenye Wang,U-CIMAN: Uncover Spectrum and User Information in LTE Mobile Access Networks,data/publications.php,renamed
+21RW-GC.pdf,21zwd-temporal.pdf,2021,"Rui Zou, Wenye Wang, and Huaiyu Dai",Temporal and Spectral Analysis of Spectrum Hole Distributions in an LTE Cell,manual-override,renamed
+21RW-TMC.pdf,24zw-flume.pdf,2024,Rui Zou and Wenye Wang,FLuMe: Understanding Differential Spectrum Mobility Features in High Resolution,data/publications.php,renamed
+21TW-COMNET.pdf,21fw-vulnerability.pdf,2021,Teng Fei and Wenye Wang,The Vulnerability and Enhancement of AKA Protocol for Mobile Authentication in LTE/5G Networks,data/publications.php,renamed
+agw04vtc.pdf,04agw-experimental.pdf,2004,"Avesh Agarwal, Jorinjit S. Gill, and Wenye Wang",Experimental Study of Wireless Security Protocols over Mobile IP Network,data/publications.php,renamed
+amh98.pdf,98amh-mobility.pdf,1998,"Ian F. Akyildiz, Janise McNair, Joseph Ho, Huseyin Uzunalioglu, and Wenye Wang",Mobility Management in Current and Future Communication Networks,data/publications.php,renamed
+amh99.pdf,99amh-mobility.pdf,1999,"Ian F. Akyildiz, Janise McNair, Joseph Ho, Huseyin Uzunalioglu, and Wenye Wang",Mobility Management for Next Generation Wireless Systems,data/publications.php,renamed
+aw04ton.pdf,04aw-predictive.pdf,2004,Ian F. Akyildiz and Wenye Wang,The Predictive User Mobility Profile Framework for Wireless Multimedia Networks,data/publications.php,renamed
+aw05bn.pdf,05aw-measuring.pdf,2005,Avesh K. Agarwal and Wenye Wang,Measuring Performance Impact of Security Protocols in Wireless Local Area Networks,data/publications.php,renamed
+aw05gb.pdf,05awm-experimental.pdf,2005,"Avesh Agarwal, Wenye Wang, Janise Y. McNair",An Experimental Study of Cross-Layer Security Protocols in Public Access Wireless Networks,data/publications.php,renamed
+aw05ic3.pdf,05aw-statistical.pdf,2005,Avesh Agarwal and Wenye Wang,Statistical Analysis of the Impact of Routing in MANET Based on Real-Time Measurements,data/publications.php,renamed
+Competing_Epidemics_on_Graphs_-_Global_Convergence_and_Coexistence.pdf,21dme-competing.pdf,2021,"Prajwal N. Doshi, Saurabh Mallick, and Do Young Eun",Competing Epidemics on Graphs: Global Convergence and Coexistence,manual-override,renamed
+Controlling_Metastable_Infection_Patterns_in_Multilayer_Networks_via_Interlink_Design.pdf,21cde-controlling.pdf,2021,"Ayan Chattopadhyay, Huaiyu Dai, and Do Young Eun",Controlling Metastable Infection Patterns in Multilayer Networks via Interlink Design,manual-override,renamed
+Differential_Privacy_and_Prediction_Uncertainty_of_Gossip_Protocols_in_General_Networks.pdf,20jde-differential.pdf,2020,"Mohammad Hossein Jafari, Huaiyu Dai, and Do Young Eun",Differential Privacy and Prediction Uncertainty of Gossip Protocols in General Networks,manual-override,renamed
+lw04gb.pdf,04lw-dynamic.pdf,2004,Wei Liang and Wenye Wang,A Dynamic Security Association Control Scheme for Efficient Authentication in Wireless Networks,data/publications.php,renamed
+lw04ic3n.pdf,04lw-analytical.pdf,2004,Wei Liang and Wenye Wang,An Analytical Study on the Impact of Authentication in Wireless Local Area Networks,data/publications.php,renamed
+lw04mil.pdf,04lw-lightweight.pdf,2004,Wei Liang and Wenye Wang,A Lightweight Authentication Protocol with Local Security Association Control in Mobile Networks,data/publications.php,renamed
+lw04pimrc.pdf,04lw-cost.pdf,2004,Wei Liang and Wenye Wang,A Cost-Aware Control Scheme for Efficient Authentication in Wireless Networks,data/publications.php,renamed
+lw04vtc.pdf,04lw-local.pdf,2004,Wei Liang and Wenye Wang,A Local Authentication Control Scheme Based on AAA Architecture in Wireless Networks,data/publications.php,renamed
+mtw05comnet.pdf,05mtw-survey.pdf,2005,"Janise McNair, Tuna Tugcu, Wenye Wang, and Jiang Xie",A Survey of Cross-Layer Performance Enhancements for Mobile IP Networks,data/publications.php,renamed
+tw05ic3.pdf,05tw-lightweight.pdf,2005,Nurcan Tezcan and Wenye Wang,A Lightweight Classification Algorithm for Energy Conservation in Wireless Sensor Networks,data/publications.php,renamed
+tw06icc.pdf,06tw-tts-2.pdf,2006,Nurcan Tezcan and Wenye Wang,TTS: A Two-Tiered Scheduling Algorithm for Wireless Sensor Networks,data/publications.php,renamed
+wa01jsac.pdf,01wa-new.pdf,2001,Wenye Wang and Ian F. Akyildiz,A New Signaling Protocol for Intersystem Roaming in Next-Generation Wireless Systems,data/publications.php,renamed
+was01lt.pdf,01was-optimal.pdf,2001,"Wenye Wang, Ian F. Akyildiz, and Gordon L. St¨¹ber",An Optimal Partition Algorithm for Minimization of Paging Costs,data/publications.php,renamed
+was01page.pdf,01was-effective.pdf,2001,"Wenye Wang, Ian F. Akyildiz, Gordon L. St¨¹ber, and Boo-Young Chung",Effective Paging Schemes with Delay Bounds as QoS Constraints in Wireless Systems,data/publications.php,renamed
+wla05jwcmc.pdf,05wla-integration.pdf,2005,"Wenye Wang, Wei Liang, and Avesh K. Agarwal",Integration of Authentication and Mobility Management in Third Generation and WLAN Data Networks,data/publications.php,renamed
+ww04gb.pdf,04ww-energy.pdf,2004,Xinbing Wang and Wenye Wang,Energy-Aware Call Admission Control Scheme in Wireless Cellular Networks,data/publications.php,renamed
+ww04wcnc.pdf,04ww-efficient.pdf,2004,Xinbing Wang and Wenye Wang,An Efficient Negotiation Protocol for Real-Time Multimedia Applications Over Wireless Networks,data/publications.php,renamed
+wwn06twc.pdf,06wwn-energy.pdf,2006,"Wenye Wang, Xinbing Wang, and Arne Nilsson","Energy-Efficient Bandwidth Allocation in Wireless Networks: Algorithms, Analysis, and Simulation",data/publications.php,renamed
+wx06comnet.pdf,06wx-cost.pdf,2006,Wenye Wang and Guoliang Xue,A Cost-Minimization Algorithm for Fast Location Tracking in Mobile Wireless Networks,data/publications.php,renamed
+xw06icc.pdf,06xw-modeling.pdf,2006,Fei Xing and Wenye Wang,Modeling and Analysis of Connectivity in Mobile Ad Hoc Networks with Misbehaving Nodes,data/publications.php,renamed

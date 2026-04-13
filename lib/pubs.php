@@ -9,6 +9,9 @@ function pubs_load_all(): array {
     $area = $p['area'] ?? [];
     $p['area'] = is_array($area) ? $area : array_map('trim', explode(',', (string)$area));
     $p['selected'] = !empty($p['selected']);
+    $link = trim((string)($p['link'] ?? ''));
+    $p['link'] = $link;
+    $p['has_pdf'] = $link !== '' && is_file(__DIR__ . '/../' . $link);
   }
   unset($p);
   
@@ -83,9 +86,11 @@ function pubs_render_paragraphs(array $pubs, string $prefix = 'P'): string {
     $venue = htmlspecialchars(pubs_clean_text((string)$p['venue']));
     $extra = trim($p['extra'] ?? '');
     $doc = '';
-    if (!empty($p['link'])) {
+    if (!empty($p['has_pdf'])) {
       $url = htmlspecialchars($p['link']);
       $doc = " <span class=\"publication-doc\"><a href=\"{$url}\" target=\"blank\"> pdf </a></span>";
+    } else {
+      $doc = " <span class=\"publication-doc publication-doc--missing\"> pdf </span>";
     }
     $extra_html = $extra ? " <span class=\"publication-extra\">{$extra}</span>" : '';
 
