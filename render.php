@@ -6,6 +6,7 @@ class PHPStaticGeneratorImproved {
     private $outputDir;
     private $baseUrl;
     private $excludedStaticDirs = ['papers'];
+    private $papersBaseUrl = 'https://raw.githubusercontent.com/wwang-ncsu/NeTWIS/main/papers/';
     private $phpExtensions = ['.php', '.html', '.htm'];
     private $staticExtensions = ['.css', '.js', '.png', '.jpg', '.jpeg', '.gif', 
                                 '.svg', '.ico', '.woff', '.woff2', '.ttf', '.eot',
@@ -292,7 +293,11 @@ try {
     
     
     private function processHtmlContent($content, $currentPath) {
-        $content = preg_replace('/(href\s*=\s*["\'])papers\//i', '$1../papers/', $content);
+        $content = preg_replace(
+            '/(href\s*=\s*["\'])papers\//i',
+            '$1' . $this->papersBaseUrl,
+            $content
+        );
         
         
         $content = preg_replace('/href\s*=\s*["\']http:\/\/localhost(?::\d+)?([^"\']*)["\']/', 'href="$1"', $content);
