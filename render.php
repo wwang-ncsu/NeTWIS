@@ -5,6 +5,7 @@ class PHPStaticGeneratorImproved {
     private $sourceDir;
     private $outputDir;
     private $baseUrl;
+    private $excludedStaticDirs = ['papers'];
     private $phpExtensions = ['.php', '.html', '.htm'];
     private $staticExtensions = ['.css', '.js', '.png', '.jpg', '.jpeg', '.gif', 
                                 '.svg', '.ico', '.woff', '.woff2', '.ttf', '.eot',
@@ -23,6 +24,29 @@ class PHPStaticGeneratorImproved {
         if (!$this->sourceDir) {
             throw new Exception("empty dir: $sourceDir");
         }
+    }
+    
+    private function isExcludedRelativePath($relativePath) {
+        $relativePath = ltrim(str_replace('\\', '/', $relativePath), '/');
+        $firstSegment = explode('/', $relativePath)[0] ?? '';
+        if ($firstSegment !== '' && str_starts_with($firstSegment, 'docs')) {
+            return true;
+        }
+        
+        $excludedDirs = array_unique(array_filter([
+            'docs',
+            basename($this->outputDir),
+            ...$this->excludedStaticDirs
+        ]));
+        
+        foreach ($excludedDirs as $excludedDir) {
+            $prefix = rtrim($excludedDir, '/') . '/';
+            if ($relativePath === $excludedDir || str_starts_with($relativePath, $prefix)) {
+                return true;
+            }
+        }
+        
+        return false;
     }
     
     
@@ -81,10 +105,15 @@ class PHPStaticGeneratorImproved {
                     continue;
                 }
                 
+                $relativePath = str_replace($this->sourceDir, '', $file->getPathname());
+                $relativePath = ltrim(str_replace('\\', '/', $relativePath), '/');
+                
+                if ($this->isExcludedRelativePath($relativePath)) {
+                    continue;
+                }
+                
                 
                 if (in_array($extension, $this->phpExtensions)) {
-                    $relativePath = str_replace($this->sourceDir, '', $file->getPathname());
-                    $relativePath = ltrim(str_replace('\\', '/', $relativePath), '/');
                     $files[] = $relativePath;
                 }
             }
@@ -110,10 +139,14 @@ class PHPStaticGeneratorImproved {
                     continue;
                 }
                 
+                $relativePath = str_replace($this->sourceDir, '', $file->getPathname());
+                $relativePath = ltrim(str_replace('\\', '/', $relativePath), '/');
+                
+                if ($this->isExcludedRelativePath($relativePath)) {
+                    continue;
+                }
                 
                 if (in_array($extension, $this->staticExtensions)) {
-                    $relativePath = str_replace($this->sourceDir, '', $file->getPathname());
-                    $relativePath = ltrim(str_replace('\\', '/', $relativePath), '/');
                     $files[] = $relativePath;
                 }
             }
@@ -259,6 +292,8 @@ try {
     
     
     private function processHtmlContent($content, $currentPath) {
+        $content = preg_replace('/(href\s*=\s*["\'])papers\//i', '$1../papers/', $content);
+        
         
         $content = preg_replace('/href\s*=\s*["\']http:\/\/localhost(?::\d+)?([^"\']*)["\']/', 'href="$1"', $content);
         $content = preg_replace('/src\s*=\s*["\']http:\/\/localhost(?::\d+)?([^"\']*)["\']/', 'src="$1"', $content);
