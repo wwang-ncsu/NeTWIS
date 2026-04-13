@@ -11,7 +11,7 @@ return [
   [
 'date' => '2025-12-09',
     'date_display' => 'December, 2025',
-    'html' => 'Congratulations to LoyCurtis Smith on passing his Ph.D. qualifying exam!'
+    'html' => 'Congratulations to LoyCurtis Smith on passing his Ph.D. qualifying exam on "Non-Orthogonal Multiple Access for 5G and Beyond: Measurement-Driven Performance Analytics"!'
   ],
   [
 'date' => '2025-12-02',
