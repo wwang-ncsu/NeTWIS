@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PDF Viewer</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: #111;
+    }
+
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .message {
+      color: #fff;
+      font: 16px/1.5 Arial, sans-serif;
+      max-width: 720px;
+      margin: 80px auto;
+      padding: 0 24px;
+    }
+
+    .message a {
+      color: #9fd3ff;
+    }
+  </style>
+</head>
+<body>
+  <iframe id="viewer" title="PDF viewer" hidden></iframe>
+  <div id="message" class="message" hidden></div>
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const file = params.get("file");
+      const viewer = document.getElementById("viewer");
+      const message = document.getElementById("message");
+
+      if (!file) {
+        message.hidden = false;
+        message.textContent = "No PDF file was provided.";
+        return;
+      }
+
+      let fileUrl;
+      try {
+        fileUrl = new URL(file);
+      } catch (error) {
+        message.hidden = false;
+        message.textContent = "The PDF link is invalid.";
+        return;
+      }
+
+      const allowedHosts = new Set([
+        "raw.githubusercontent.com"
+      ]);
+
+      if (!allowedHosts.has(fileUrl.hostname)) {
+        message.hidden = false;
+        message.textContent = "This PDF source is not allowed.";
+        return;
+      }
+
+      const pdfJsViewer = "https://mozilla.github.io/pdf.js/web/viewer.html?file=" + encodeURIComponent(fileUrl.toString());
+      viewer.src = pdfJsViewer;
+      viewer.hidden = false;
+      document.title = decodeURIComponent(fileUrl.pathname.split("/").pop() || "PDF Viewer");
+    })();
+  </script>
+</body>
+</html>
