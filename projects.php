@@ -10,7 +10,7 @@
 <h2>Projects</h2>
 <ul>
 
-<li><h3><a href="NSF-30134.html" target="_self">NC State University, "Non-Invasive Detection and Management of Underground Tuber Plants with Radio-Frequency Signals and Stereo Imaging."</a><p>Sponsor: iConS - Institute for Connected Sensor Systems<br/>Duration: July 2024 - June 2026<br/>PI(s): Dr. Wenye Wang, Dr. Ruozhou Yu, and Dr. Lirong Xiang (Cornell)</p></h3></li>
+<li><h3><a href="<?= $BASE_URL ?>/wireless_convergence_cps_applications.php">NC State University, "Non-Invasive Detection and Management of Underground Tuber Plants with Radio-Frequency Signals and Stereo Imaging."</a><p>Sponsor: iConS - Institute for Connected Sensor Systems<br/>Duration: July 2024 - June 2026<br/>PI(s): Dr. Wenye Wang, Dr. Ruozhou Yu, and Dr. Lirong Xiang (Cornell)</p></h3></li>
 
 <li><h3>Collaborative Research: SWIFT: LARGE: MAC-on-MAC: A Spectrum Orchestrating Control Plane for Coexisting Wireless Systems</h3><p>Sponsor: National Science Foundation - NeTS Core Program<br/>Duration: January 2021 - December 2025<br/>PI(s): Dr. Wenye Wang, Dr. Xin Wang (Stony Brook), Dr. Janise McNair (University of Florida), and Dr. Soumyajit Mandal (University of Florida)</p></li>
 
