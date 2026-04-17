@@ -5,6 +5,8 @@ class PHPStaticGeneratorImproved {
     private $sourceDir;
     private $outputDir;
     private $baseUrl;
+    private $singleInputFile = null;
+    private $inputDisplayPath;
     private $excludedStaticDirs = ['papers'];
     private $papersRawBaseUrl = 'https://raw.githubusercontent.com/wwang-ncsu/NeTWIS/main/papers/';
     private $papersViewerPath = 'pdf-viewer.html?file=';
@@ -18,14 +20,28 @@ class PHPStaticGeneratorImproved {
     private $processedUrls = [];
     private $definedFunctions = [];
     
-    public function __construct($sourceDir, $outputDir, $baseUrl = '') {
-        $this->sourceDir = realpath($sourceDir);
+    public function __construct($sourcePath, $outputDir, $baseUrl = '') {
+        $resolvedPath = realpath($sourcePath);
         $this->outputDir = $outputDir;
         $this->baseUrl = rtrim($baseUrl, '/');
-        
-        if (!$this->sourceDir) {
-            throw new Exception("empty dir: $sourceDir");
+
+        if (!$resolvedPath) {
+            throw new Exception("empty input: $sourcePath");
         }
+
+        if (is_file($resolvedPath)) {
+            $extension = '.' . pathinfo($resolvedPath, PATHINFO_EXTENSION);
+            if (!in_array($extension, $this->phpExtensions)) {
+                throw new Exception("unsupported file type: $sourcePath");
+            }
+
+            $this->sourceDir = dirname($resolvedPath);
+            $this->singleInputFile = basename($resolvedPath);
+        } else {
+            $this->sourceDir = $resolvedPath;
+        }
+
+        $this->inputDisplayPath = $resolvedPath;
     }
     
     private function isExcludedRelativePath($relativePath) {
@@ -92,6 +108,18 @@ class PHPStaticGeneratorImproved {
     
    
     private function getAllPhpFiles() {
+        if ($this->singleInputFile !== null) {
+            if (in_array($this->singleInputFile, $this->ignorePatterns)) {
+                return [];
+            }
+
+            if ($this->isExcludedRelativePath($this->singleInputFile)) {
+                return [];
+            }
+
+            return [$this->singleInputFile];
+        }
+
         $files = [];
         $iterator = new RecursiveIteratorIterator(
             new RecursiveDirectoryIterator($this->sourceDir)
@@ -397,7 +425,7 @@ try {
     
     public function generate() {
         echo "generate HTML files...\n";
-        echo "input: {$this->sourceDir}\n";
+        echo "input: {$this->inputDisplayPath}\n";
         echo "output: {$this->outputDir}\n\n";
         
         
@@ -420,8 +448,9 @@ function main() {
     global $argv;
     
     if (count($argv) < 3) {
-        echo "usage: php render.php <input> <output>\n";
-        echo "example: php render.php . ../html_site\n";
+        echo "usage: php render.php <input_dir_or_file> <output>\n";
+        echo "example (site): php render.php . ../html_site\n";
+        echo "example (single file): php render.php .\\datasets.php .\\docs\n";
         exit(1);
     }
     
