@@ -52,5 +52,5 @@ return [
   [
     'date' => '2016-05-01',
     'html' => '2016 - Technical Program Committee, <a href="http://icnp2016.comp.nus.edu.sg/" target="_blank">IEEE ICNP</a>'
-  ],
+  ]
 ];

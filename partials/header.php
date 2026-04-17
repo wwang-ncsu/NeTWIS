@@ -67,5 +67,5 @@
   </div>
 </div>
 
-<div class="wrapper" style="padding-top: 164px;"> <!-- container for main content and aside -->
+<div class="wrapper site-wrapper"> <!-- container for main content and aside -->
   <div class="main"> <!-- container for main content -->

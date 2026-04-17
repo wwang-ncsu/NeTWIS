@@ -247,7 +247,89 @@ if (PHP_SAPI === 'cli') {
     return;
 }
 
-$inlineEditorTarget = basename(parse_url($_SERVER['SCRIPT_NAME'] ?? '', PHP_URL_PATH) ?: '');
+function inline_editor_is_local_request(): bool {
+    $host = strtolower((string) ($_SERVER['HTTP_HOST'] ?? ''));
+    $serverName = strtolower((string) ($_SERVER['SERVER_NAME'] ?? ''));
+    $remoteAddr = (string) ($_SERVER['REMOTE_ADDR'] ?? '');
+
+    $localHosts = [
+        'localhost',
+        '127.0.0.1',
+        '::1',
+    ];
+
+    foreach ([$host, $serverName] as $value) {
+        if ($value === '') {
+            continue;
+        }
+
+        $normalized = preg_replace('/:\d+$/', '', $value);
+        if (in_array($normalized, $localHosts, true)) {
+            return true;
+        }
+    }
+
+    return in_array($remoteAddr, ['127.0.0.1', '::1'], true);
+}
+
+if (!inline_editor_is_local_request()) {
+    return;
+}
+
+function inline_editor_detect_target(): string {
+    $self = realpath(__FILE__) ?: __FILE__;
+    $root = realpath(__DIR__) ?: __DIR__;
+    $excluded = [
+        'config.php',
+        'inline_editor.php',
+    ];
+
+    foreach (get_included_files() as $file) {
+        $real = realpath($file) ?: $file;
+        if ($real === $self) {
+            continue;
+        }
+
+        if (dirname($real) === $root && preg_match('/\.php$/i', $real)) {
+            $base = basename($real);
+            if (!in_array($base, $excluded, true)) {
+                return $base;
+            }
+        }
+    }
+
+    $trace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS);
+    foreach (array_reverse($trace) as $frame) {
+        $file = $frame['file'] ?? '';
+        if ($file === '') {
+            continue;
+        }
+
+        $real = realpath($file) ?: $file;
+        if ($real === $self) {
+            continue;
+        }
+
+        if (dirname($real) === $root && preg_match('/\.php$/i', $real)) {
+            return basename($real);
+        }
+    }
+
+    $requestPath = parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH) ?: '';
+    if ($requestPath !== '' && $requestPath !== '/') {
+        return basename($requestPath);
+    }
+
+    $scriptFile = basename($_SERVER['SCRIPT_FILENAME'] ?? '');
+    if ($scriptFile !== '') {
+        return $scriptFile;
+    }
+
+    $scriptPath = parse_url($_SERVER['SCRIPT_NAME'] ?? '', PHP_URL_PATH) ?: '';
+    return basename($scriptPath);
+}
+
+$inlineEditorTarget = inline_editor_detect_target();
 $inlineEditorMode = inline_editor_mode($inlineEditorTarget);
 $inlineEditorEndpoint = ($BASE_URL ?? '') . '/inline_editor.php';
 $inlineEditorDataConfig = inline_editor_data_config($inlineEditorTarget);
@@ -270,6 +352,10 @@ $inlineEditorInitialData = $inlineEditorDataConfig !== null
     color: #fff;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
     font: 13px/1.2 Arial, sans-serif;
+  }
+
+  .inline-editor-toolbar.is-hidden {
+    display: none;
   }
 
   .inline-editor-toolbar button {
@@ -387,6 +473,20 @@ $inlineEditorInitialData = $inlineEditorDataConfig !== null
     margin-top: 10px;
     color: #444;
   }
+
+  @media (max-width: 768px) {
+    .inline-editor-toolbar {
+      right: 12px;
+      left: 12px;
+      bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .inline-editor-status {
+      max-width: none;
+      width: 100%;
+    }
+  }
 </style>
 <script>
   (() => {
@@ -397,13 +497,24 @@ $inlineEditorInitialData = $inlineEditorDataConfig !== null
     const initialData = <?= json_encode($inlineEditorInitialData, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?>;
     const main = document.querySelector('.main');
     if (!main) return;
+    const navList = document.querySelector('.header__item--nav ul');
+    let launcher = null;
+
+    if (navList) {
+      const launcherItem = document.createElement('li');
+      launcherItem.className = 'inline-editor-nav-item';
+      launcherItem.innerHTML = '<a href="#" data-inline-editor-launcher>Edit</a>';
+      navList.appendChild(launcherItem);
+      launcher = launcherItem.querySelector('[data-inline-editor-launcher]');
+    }
 
     const toolbar = document.createElement('div');
-    toolbar.className = 'inline-editor-toolbar';
+    toolbar.className = 'inline-editor-toolbar is-hidden';
     toolbar.innerHTML = `
       <button type="button" data-action="toggle">${mode === 'static' ? 'Edit Page' : mode === 'data' ? 'Edit Data' : 'Editing Unavailable'}</button>
       <button type="button" data-action="save" style="display:none;">Save</button>
       <button type="button" data-action="cancel" style="display:none;background:#555;">Cancel</button>
+      <button type="button" data-action="hide" class="inline-editor-secondary" style="background:#555;">Close</button>
       <span class="inline-editor-status">Local inline editor</span>
     `;
     document.body.appendChild(toolbar);
@@ -411,12 +522,35 @@ $inlineEditorInitialData = $inlineEditorDataConfig !== null
     const toggleButton = toolbar.querySelector('[data-action="toggle"]');
     const saveButton = toolbar.querySelector('[data-action="save"]');
     const cancelButton = toolbar.querySelector('[data-action="cancel"]');
+    const hideButton = toolbar.querySelector('[data-action="hide"]');
     const status = toolbar.querySelector('.inline-editor-status');
     let originalHtml = main.innerHTML;
+
+    const openToolbar = () => {
+      toolbar.classList.remove('is-hidden');
+      if (launcher) {
+        launcher.classList.add('navon');
+      }
+    };
+
+    const closeToolbar = () => {
+      toolbar.classList.add('is-hidden');
+      if (launcher) {
+        launcher.classList.remove('navon');
+      }
+    };
+
+    if (launcher) {
+      launcher.addEventListener('click', (event) => {
+        event.preventDefault();
+        openToolbar();
+      });
+    }
 
     if (mode === 'disabled') {
       toggleButton.disabled = true;
       status.textContent = 'Editing is not enabled for this page yet.';
+      hideButton.addEventListener('click', closeToolbar);
       return;
     }
 
@@ -433,14 +567,28 @@ $inlineEditorInitialData = $inlineEditorDataConfig !== null
           : 'Local inline editor';
       };
 
+      const exitStaticEditing = ({ restore } = { restore: true }) => {
+        if (restore) {
+          main.innerHTML = originalHtml;
+        }
+        setEditing(false);
+      };
+
       toggleButton.addEventListener('click', () => {
         originalHtml = main.innerHTML;
+        openToolbar();
         setEditing(true);
       });
 
       cancelButton.addEventListener('click', () => {
-        main.innerHTML = originalHtml;
-        setEditing(false);
+        exitStaticEditing();
+      });
+
+      hideButton.addEventListener('click', () => {
+        if (main.contentEditable === 'true') {
+          exitStaticEditing();
+        }
+        closeToolbar();
       });
 
       saveButton.addEventListener('click', async () => {
@@ -501,6 +649,15 @@ $inlineEditorInitialData = $inlineEditorDataConfig !== null
 
       const list = modal.querySelector('.inline-editor-list');
       const panelStatus = modal.querySelector('.inline-editor-panel-status');
+
+      const closeDataEditor = () => {
+        modal.classList.remove('is-open');
+        items = cloneItems();
+        renderList();
+        panelStatus.textContent = 'Edit the data items below and save.';
+        status.textContent = `Local inline editor for ${dataConfig.label.toLowerCase()}`;
+        closeToolbar();
+      };
 
       const renderList = () => {
         list.innerHTML = '';
@@ -590,10 +747,7 @@ $inlineEditorInitialData = $inlineEditorDataConfig !== null
         }
 
         if (action === 'close') {
-          modal.classList.remove('is-open');
-          items = cloneItems();
-          renderList();
-          panelStatus.textContent = 'Edit the data items below and save.';
+          closeDataEditor();
           return;
         }
 
@@ -627,8 +781,17 @@ $inlineEditorInitialData = $inlineEditorDataConfig !== null
       toggleButton.addEventListener('click', () => {
         items = cloneItems();
         renderList();
+        openToolbar();
         modal.classList.add('is-open');
         status.textContent = `Editing ${dataConfig.label.toLowerCase()} data`;
+      });
+
+      hideButton.addEventListener('click', () => {
+        if (modal.classList.contains('is-open')) {
+          closeDataEditor();
+          return;
+        }
+        closeToolbar();
       });
 
       status.textContent = `Local inline editor for ${dataConfig.label.toLowerCase()}`;

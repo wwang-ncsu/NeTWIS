@@ -426,8 +426,10 @@ table {
   -webkit-box-pack: space-between;
   -ms-flex-pack: space-between;
   justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
   padding: 0.625em 0.9375em 0.4375em; }
-  @media (min-width: 769px) {
+  @media (min-width: 1025px) {
     .header {
       position: fixed;
       top: 0;
@@ -449,6 +451,12 @@ table {
   .wrapper::-webkit-scrollbar {
     display: none; }
 
+.site-wrapper {
+  padding-top: 0.625em; }
+  @media (min-width: 1025px) {
+    .site-wrapper {
+      padding-top: 164px; } }
+
 .main {
   -webkit-box-ordinal-group: 2;
   -moz-box-ordinal-group: 2;
@@ -469,6 +477,10 @@ table {
       overflow: auto;
       -webkit-overflow-scrolling: touch;
       -ms-overflow-style: none; } }
+  @media (max-width: 1024px) {
+    .main {
+      width: 100%;
+      padding: 0; } }
 
 .aside--left {
   -webkit-box-ordinal-group: 1;
@@ -485,6 +497,10 @@ table {
       overflow-x: hidden;
       -webkit-overflow-scrolling: touch;
       -ms-overflow-style: none; } }
+  @media (max-width: 1024px) {
+    .aside--left {
+      order: 3;
+      width: 100%; } }
 .aside--right {
   -webkit-box-ordinal-group: 3;
   -moz-box-ordinal-group: 3;
@@ -501,6 +517,11 @@ table {
       overflow-x: hidden;
       -webkit-overflow-scrolling: touch;
       -ms-overflow-style: none; } }
+  @media (max-width: 1024px) {
+    .aside--right {
+      order: 2;
+      width: 100%;
+      padding-left: 0; } }
 
 input,
 textarea {
@@ -638,7 +659,7 @@ textarea {
       display: box;
       display: flexbox;
       display: flex;
-      width: 31.25em; }
+      width: min(31.25em, 100%); }
       .header__item--professor #photo-header {
         display: -webkit-box;
         display: -moz-box;
@@ -733,6 +754,66 @@ textarea {
           color: #a00000;
           border-radius: 15px;
           margin-right: -8px; }
+
+@media (max-width: 1024px) {
+  .header {
+    position: static;
+    gap: 1.25rem; }
+
+  .wrapper {
+    height: auto; }
+
+  .header__item {
+    width: 100%; }
+
+  .header__item--professor {
+    width: 100%; }
+
+  .header__item--nav {
+    margin-top: 0;
+    text-align: left; }
+
+  .header__item--nav ul {
+    justify-content: flex-start;
+    gap: 0.75rem 1.25rem;
+    margin: 0; }
+
+  .header__item--nav ul li:not(:first-child) {
+    margin-top: 0; }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0.875em 0.875em 0.625em; }
+
+  .header__item--professor {
+    flex-direction: column; }
+
+  .header__item--professor #photo-header {
+    width: 100%;
+    justify-content: flex-start; }
+
+  .header__item--professor p {
+    margin-top: 0; }
+
+  .header__item--professor p #name-prof {
+    font-size: 1.6em; }
+
+  .header__item--professor .contact-faculty ul {
+    flex-direction: column; }
+
+  .header__item--professor .contact-faculty ul li {
+    margin-right: 0; }
+
+  .header__item--nav ul {
+    align-items: center; }
+
+  .header__item--nav ul li:first-child {
+    width: 100%; }
+
+  .header__item--nav ul li:not(:first-child) {
+    margin-top: 0; }
+}
 
 .side-info {
   position: relative; }
@@ -1148,16 +1229,18 @@ textarea {
   display: box;
   display: flexbox;
   display: flex;
-  -webkit-flex-flow: row no-wrap;
-  -ms-flex-flow: row no-wrap;
-  flex-flow: row no-wrap;
-  align-items: center;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  align-items: flex-start;
   width: 100%;
   border-bottom: 1px solid #e6e6e6;
+  gap: 1rem;
   padding: 0.75em; }
   .download-table__row--header {
     text-align: center;
     background: #e6e6e6;
+    align-items: center;
     padding: 0.625em; }
 .download-table__wrapper {
   display: -webkit-box;
@@ -1169,7 +1252,9 @@ textarea {
   display: flex;
   -webkit-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  flex: 1 1 auto;
+  min-width: 0; }
 .download-table__column {
   flex-grow: 0;
   -webkit-flex-grow: 0;
@@ -1179,29 +1264,163 @@ textarea {
 .download-table__description, .download-table__title {
   flex-grow: 1;
   -webkit-flex-grow: 1;
+  min-width: 0;
   width: 25em; }
 .download-table__title {
   text-align: center;
   font-weight: 700;
   color: #a00000;
-  width: 17.5em; }
+  width: 17.5em;
+  padding-right: 1rem;
+  overflow-wrap: anywhere; }
 .download-table__source {
   text-align: center;
   color: #676767;
-  width: 7.5em; }
+  width: 7.5em;
+  flex: 0 0 7.5em; }
   .download-table__source a {
     color: #676767; }
 
-@media all and (max-width: 53.75em) {
+#download-overview .download-table__row--header {
+  display: none; }
+
+#download-overview .datasets-intro {
+  margin: 0.5rem 0 1.25rem;
+  color: #4a4a4a; }
+
+#download-overview .download-table__row {
+  position: relative;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 1.25rem 1.5rem; }
+
+#download-overview .download-table__wrapper,
+#download-overview .download-table__title-description,
+#download-overview .download-table__title,
+#download-overview .download-table__description {
+  width: 100%; }
+
+#download-overview .download-table__title-description {
+  display: block; }
+
+#download-overview .download-table__title {
+  text-align: left;
+  padding-right: 5.5rem;
+  margin-bottom: 0.75rem; }
+
+#download-overview .download-table__description {
+  max-width: none; }
+
+#download-overview .download-table__description p,
+#download-overview .download-table__description h4,
+#download-overview .download-table__description .publication-item {
+  overflow-wrap: anywhere; }
+
+#download-overview .dataset-accordion-toggle {
+  border-bottom: 0 solid #e6e6e6;
+  cursor: pointer;
+  margin-bottom: 0;
+  transition: border-bottom-width 0.5s ease-in-out, color 0.3s ease; }
+  #download-overview .dataset-accordion-toggle:hover {
+    color: #a00000; }
+  #download-overview .dataset-accordion-toggle:before {
+    font-family: 'icomoon';
+    content: "\e611";
+    font-size: 55%;
+    position: relative;
+    top: -2px;
+    margin-right: 8px;
+    color: #676767; }
+  #download-overview .dataset-accordion-toggle.expanded_content_active {
+    border-bottom-width: 1px; }
+  #download-overview .dataset-accordion-toggle.expanded_content_active:before {
+    content: "\e610"; }
+
+#download-overview .download-table__source {
+  position: absolute;
+  top: 1.15rem;
+  right: 1rem;
+  width: auto;
+  flex: 0 0 auto;
+  text-align: right; }
+
+#download-overview .download-table__description {
+  position: relative;
+  padding-bottom: 3rem; }
+
+#download-overview .dataset-collapse-button {
+  color: #676767;
+  background: none;
+  border-color: #e6e6e6;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 1rem 0.25rem 0;
+  transition: all 0.5s ease; }
+  #download-overview .dataset-collapse-button:hover {
+    background: #676767;
+    color: #f0f0f0;
+    border-color: #272727; }
+
+@media (max-width: 768px) {
+  #download-overview .download-table__row {
+    padding: 1rem; }
+
+  #download-overview .download-table__title {
+    padding-right: 0; }
+
+  #download-overview .download-table__source {
+    position: static;
+    margin-top: 0.5rem;
+    text-align: left; }
+
+  #download-overview .download-table__description {
+    padding-bottom: 3.5rem; }
+
+  #download-overview .dataset-collapse-button {
+    right: auto;
+    left: 0; }
+}
+
+@media all and (max-width: 75em) {
+  .download-table__row {
+    flex-direction: column;
+    align-items: stretch; }
+
+  .download-table__row--header {
+    display: none; }
+
   .download-table__title-description {
     flex-direction: column;
     -webkit-flex-direction: column;
-    width: 25em; }
+    width: 100%; }
     .download-table__title-description div {
       flex-grow: 0;
       -webkit-flex-grow: 0; }
     .download-table__title-description > div {
       width: 100%; } }
+
+@media all and (max-width: 75em) {
+  .download-table__title,
+  .download-table__description,
+  .download-table__source {
+    width: 100%; }
+
+  .download-table__title {
+    text-align: left;
+    padding-right: 0;
+    margin-bottom: 0.5rem; }
+
+  .download-table__description p,
+  .download-table__description h4,
+  .download-table__description .publication-item {
+    overflow-wrap: anywhere; }
+
+  .download-table__source {
+    flex: 0 0 auto;
+    text-align: left;
+    padding-top: 0.25rem; }
+}
 #news {
   padding-top: 1.5em; }
 
