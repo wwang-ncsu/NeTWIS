@@ -128,6 +128,7 @@
 <script src="<?= asset('2207NetWisLabfiles/flowtype.js') ?>"></script>
 <script src="<?= asset('2207NetWisLabfiles/jquery.nanogallery.min.js') ?>"></script>
 <script src="<?= asset('2207NetWisLabfiles/app.js') ?>"></script>
+<?php require_once __DIR__ . '/../inline_editor.php'; ?>
 
 <!-- Google Analytics -->
 <script>
