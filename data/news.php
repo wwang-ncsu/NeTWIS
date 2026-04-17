@@ -5,7 +5,7 @@
 return [
   [
 'date' => '2026-05-01',
-    'date_display' => 'December, 2026',
+    'date_display' => 'May, 2026',
     'html' => 'Congratulations to Mengning Li on the Best Paper Award at IEEE INFOCOM 2026 for "UNI-FI: Integrated Multi-Task Wi-Fi Sensing"! <a href="https://infocom2026.ieee-infocom.org/awards/awards" target="_blank" rel="noopener">Award link</a>'
   ],
   [
