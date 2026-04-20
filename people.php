@@ -69,7 +69,7 @@
         <h4 class="name-member">Rui Zou, Ph.D.</h4>
         <h6>Ph.D. Student, 2015–2023</h6>
         <p class="short-bio">
-          Rui Zou entered the Ph.D. program in NCSU in Fall 2015. He received his master’s degree from BUPT; his Bachelor program was co-provided by BUPT and Queen Mary University of London.
+          Thesis: “Modeling, Prediction, and Multi-RAT Access of High Resolution Spectrum Based on Decoding Enabled Measurement.” Currently with Central Arizona College, AZ 85128.
         </p>
       </div>
     </li>
@@ -93,7 +93,7 @@
         <h4 class="name-member">Jie Wang, Ph.D.</h4>
         <h6>Ph.D. Student, 2014–2019</h6>
         <p class="short-bio">
-          Thesis: “Modeling and Analysis of Mobile Data Dynamics in Heterogeneous Wireless Networks.” She is currently with NC State University, Raleigh, NC.
+          Thesis: “Modeling and Analysis of Mobile Data Dynamics in Heterogeneous Wireless Networks.” She is currently with Tongji University, China.
         </p>
       </div>
     </li>
@@ -311,7 +311,7 @@
 
     <li>
       <div class="photo-member">
-        <img src="http://localhost:8000/2207NetWisLabfiles/people/mohit.jpg" alt="Mohit Shah">
+        <img src="http://localhost:8000/2207NetWisLabfiles/people/mohit_shah.jpg" alt="Mohit Shah">
       </div>
       <div class="desc-member">
         <h4 class="name-member">Mohit Shah, M.S.</h4>
