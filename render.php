@@ -128,7 +128,7 @@ class PHPStaticGeneratorImproved {
         foreach ($iterator as $file) {
             if ($file->isFile()) {
                 $filename = $file->getFilename();
-                $extension = '.' . pathinfo($filename, PATHINFO_EXTENSION);
+                $extension = strtolower('.' . pathinfo($filename, PATHINFO_EXTENSION));
                 
                
                 if (in_array($filename, $this->ignorePatterns)) {
@@ -162,7 +162,7 @@ class PHPStaticGeneratorImproved {
         foreach ($iterator as $file) {
             if ($file->isFile()) {
                 $filename = $file->getFilename();
-                $extension = '.' . pathinfo($filename, PATHINFO_EXTENSION);
+                $extension = strtolower('.' . pathinfo($filename, PATHINFO_EXTENSION));
                 
                 
                 if (in_array($filename, $this->ignorePatterns)) {
