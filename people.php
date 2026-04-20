@@ -230,7 +230,7 @@
 
     <li>
       <div class="photo-member">
-        <img src="http://localhost:8000/2207NetWisLabfiles/people/1fei.JPG" alt="Fei Xing">
+        <img src="http://localhost:8000/2207NetWisLabfiles/people/fei_xing.jpg" alt="Fei Xing">
       </div>
       <div class="desc-member">
         <h4 class="name-member">Fei Xing, Ph.D.</h4>
@@ -243,7 +243,7 @@
 
     <li>
       <div class="photo-member">
-        <img src="http://localhost:8000/2207NetWisLabfiles/people/1nurcan.JPG" alt="Nurcan Tezcan">
+        <img src="http://localhost:8000/2207NetWisLabfiles/people/nurcan_tezcan.jpg" alt="Nurcan Tezcan">
       </div>
       <div class="desc-member">
         <h4 class="name-member">Nurcan Tezcan, Ph.D.</h4>
