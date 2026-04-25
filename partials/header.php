@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="<?= asset('2207NetWisLabfiles/nanogallery.min.css') ?>">
 </head>
-<body>
+<body class="<?= $active ? 'page-' . htmlspecialchars($active) : '' ?>">
 
 <!-- Header -->
 <div class="header"> 
