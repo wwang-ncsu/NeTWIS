@@ -98,41 +98,12 @@ function initDatasetIntro() {
 
 var pos;
 function menuItemPosition() {
-  //Set the position of circles on menu
-  var pos = $(".menu__item:nth-child(1)").offset();
-  var percentage = 0.2;
-  var d = $(".menu").width() * percentage; 
-  if ($(window).width() > 1024) {     
-    $(".menu__item:nth-child(1)").offset({ top: pos.top, left: pos.left });
-    $(".menu__item:nth-child(2)").offset({ top: pos.top+d, left: pos.left+1.8*d });
-    $(".menu__item:nth-child(3)").offset({ top: pos.top+2*d, left: pos.left });
-    $(".menu__item:nth-child(4)").offset({ top: pos.top+3*d, left: pos.left+1.8*d });
-    $(".menu__item:nth-child(5)").offset({ top: pos.top+4*d, left: pos.left });
-  }
-  if ($(window).width() < 1025) {
-    var circleWidth = $(".menu__item .circle").width();
+  var $menuItems = $(".menu__item");
+  var $subMenus = $(".menu__item .sub-menu");
 
-    $(".menu__item:nth-child(1)").offset({ top: pos.top,              left: pos.left });
-    $(".menu__item:nth-child(2)").offset({ top: pos.top+  circleWidth-1/4*circleWidth,  left: pos.left });
-    $(".menu__item:nth-child(3)").offset({ top: pos.top+2*circleWidth-2/4*circleWidth,left: pos.left });
-    $(".menu__item:nth-child(4)").offset({ top: pos.top+3*circleWidth-3/4*circleWidth,left: pos.left });
-    $(".menu__item:nth-child(5)").offset({ top: pos.top+4*circleWidth-4/4*circleWidth,left: pos.left });
-
-    $(".menu__item:nth-child(1) .sub-menu").offset({ top: $(".menu__item:nth-child(1) .sub-menu").offset().top,  left: pos.left+3/4*circleWidth });
-    $(".menu__item:nth-child(3) .sub-menu").offset({ top: $(".menu__item:nth-child(3) .sub-menu").offset().top,  left: pos.left+3/4*circleWidth });
-    
-    $(".menu__item .sub-menu").hide();
-    $(".menu__item:nth-child(1) >a").removeAttr("href");
-    $(".menu__item:nth-child(3) >a").removeAttr("href");
-
-    console.log($(".menu__item").height());
-    
-    $('.menu__item').on("click", function()
-    {
-      $(this).find( ".sub-menu" ).toggle();
-      $('.menu').children().not($(this)).find( ".sub-menu" ).hide();
-    });
-  }
+  $menuItems.off("click.mobileMenu");
+  $menuItems.css({ top: "", left: "" });
+  $subMenus.css({ top: "", left: "", display: "" });
 
   return false;
 };
