@@ -15,22 +15,6 @@
 
     <li>
       <div class="photo-member">
-        <img src="http://localhost:8000/2207NetWisLabfiles/people/Mengning_selfie.jpg" alt="Mengning Li">
-      </div>
-      <div class="desc-member">
-        <h4 class="name-member"><a href="#" target="_blank" rel="noopener">Mengning Li</a></h4>
-        <h6>Ph.D. Student, 2022–current</h6>
-        <p class="email-member">
-          <a href="mailto:mli55@ncsu.edu?Subject=Hello" target="_top"><span data-icon=""></span> mli55@ncsu.edu</a>
-        </p>
-        <p class="short-bio">
-          Mengning Li joined the Ph.D. program at NCSU’s ECE department in Fall 2022. She received her Bachelor’s degree from Shanghai Jiao Tong University.
-        </p>
-      </div>
-    </li>
-
-    <li>
-      <div class="photo-member">
         <img src="http://localhost:8000/2207NetWisLabfiles/people/Curtis.jpg" alt="LoyCurtis Smith">
       </div>
       <div class="desc-member">
@@ -47,16 +31,26 @@
 
     <li>
       <div class="photo-member">
+        <img src="http://localhost:8000/2207NetWisLabfiles/people/Mengning_selfie.jpg" alt="Mengning Li">
+      </div>
+      <div class="desc-member">
+        <h4 class="name-member">Mengning Li, Ph.D.</h4>
+        <h6>Ph.D. Student, 2022–2026</h6>
+        <p class="short-bio">
+          Mengning Li joined the Ph.D. program at NCSU’s ECE department in Fall 2022. She received her Bachelor’s degree from Shanghai Jiao Tong University.
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <div class="photo-member">
         <img src="http://localhost:8000/2207NetWisLabfiles/people/teng.jpg" alt="Teng Fei">
       </div>
       <div class="desc-member">
-        <h4 class="name-member"><a href="#" target="_blank" rel="noopener">Teng Fei</a></h4>
-        <h6>Ph.D. Student, 2019–current</h6>
-        <p class="email-member">
-          <a href="mailto:tfei3@ncsu.edu?Subject=Hello" target="_top"><span data-icon=""></span> tfei3@ncsu.edu</a>
-        </p>
+        <h4 class="name-member">Teng Fei, Ph.D.</h4>
+        <h6>Ph.D. Student, 2019–2026</h6>
         <p class="short-bio">
-          Teng Fei joined the Ph.D. program at NCSU's ECE department in Spring 2019. Before that, he received his Bachelor’s degree from Harbin Institute of Technology.
+          Thesis: “From Vulnerability to Usability: Practical Implications and Emerging Applications of Radio Access and RF Signals.”
         </p>
       </div>
     </li>

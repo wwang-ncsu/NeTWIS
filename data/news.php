@@ -4,6 +4,16 @@
 
 return [
   [
+    'date' => '2026-07-02',
+    'date_display' => 'July, 2026',
+    'html' => 'Congratulations on Mengning Li who has successfully passed her PhD defense! Congratulations, Dr. Mengning Li!'
+  ],
+  [
+    'date' => '2026-07-01',
+    'date_display' => 'July, 2026',
+    'html' => 'Congratulations on Teng Fei who has successfully passed his PhD defense on "From Vulnerability to Usability: Practical Implications and Emerging Applications of Radio Access and RF Signals." Congratulations, Dr. Teng Fei!'
+  ],
+  [
 'date' => '2026-05-01',
     'date_display' => 'May, 2026',
     'html' => 'Congratulations to Mengning Li on the Best Paper Award at IEEE INFOCOM 2026 for "UNI-FI: Integrated Multi-Task Wi-Fi Sensing"! <a href="https://infocom2026.ieee-infocom.org/awards/awards" target="_blank" rel="noopener">Award link</a>'
