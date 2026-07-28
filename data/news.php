@@ -6,7 +6,7 @@ return [
   [
     'date' => '2026-07-02',
     'date_display' => 'July, 2026',
-    'html' => 'Congratulations on Mengning Li who has successfully passed her PhD defense! Congratulations, Dr. Mengning Li!'
+    'html' => 'Congratulations on Mengning Li who has successfully passed her PhD defense on "AI-Native Wireless Convergence." Congratulations, Dr. Mengning Li!'
   ],
   [
     'date' => '2026-07-01',

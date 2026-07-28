@@ -37,7 +37,7 @@
         <h4 class="name-member">Mengning Li, Ph.D.</h4>
         <h6>Ph.D. Student, 2022–2026</h6>
         <p class="short-bio">
-          Mengning Li joined the Ph.D. program at NCSU’s ECE department in Fall 2022. She received her Bachelor’s degree from Shanghai Jiao Tong University.
+          Thesis: “AI-Native Wireless Convergence.”
         </p>
       </div>
     </li>
