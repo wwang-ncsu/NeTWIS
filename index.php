@@ -48,12 +48,13 @@
           $authors = htmlspecialchars(pubs_clean_text((string)$pub['authors']));
           $venue = htmlspecialchars(pubs_clean_text((string)$pub['venue']));
           $href = !empty($pub['link']) ? htmlspecialchars($pub['link']) : '#';
+          $extra = trim((string)($pub['extra'] ?? ''));
         ?>
       <li>
         <a href="<?= $href ?>" target="_blank">
           <h3 class="title"><?= $title ?></h3>
         </a>
-        <p><?= $authors ?>, <?= $venue ?></p>
+        <p><?= $authors ?>, <?= $venue ?><?php if ($extra !== ''): ?> <span class="publication-extra"><?= $extra ?></span><?php endif; ?></p>
       </li>
       <?php endforeach; ?>
     </ul>
