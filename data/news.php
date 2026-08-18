@@ -4,6 +4,11 @@
 
 return [
   [
+    'date' => '2026-08-18',
+    'date_display' => 'August, 2026',
+    'html' => 'Congratulations to Mengning Li and Wenye Wang! Their paper "PATHS: Plug-and-Play Tracking from Heterogeneous Streams to a Shared Token Interface" has been accepted to ACM MobiCom 2026! <a href="https://www.sigmobile.org/mobicom/2026/index.html" target="_blank" rel="noopener">Conference website</a>'
+  ],
+  [
     'date' => '2026-07-02',
     'date_display' => 'July, 2026',
     'html' => 'Congratulations on Mengning Li who has successfully passed her PhD defense on "AI-Native Wireless Convergence." Congratulations, Dr. Mengning Li!'

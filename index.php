@@ -15,9 +15,10 @@
       with Dr. Ian F. Akyildiz in Atlanta, Georiga. Her Ph.D. thesis is on location management in heterogeneous
       wireless networks. In Fall 2002, she joined the Department of Electrical and Computer Engineering, NC State
       University, as an assistant professor and has been an associate professor since Fall 2008, and a full professor
-      since Fall 2014. Her current research interests include mobile and secure computing, modeling and performance
-      analysis of single- and multi-hop wireless networks, network topology and architecture design. Dr. Wang received
-      NSF CAREER Award in 2006. She is an ACM member and an IEEE Fellow.
+      since Fall 2014. Her current research interests include modeling and performance evaluation of integrated sensing
+      and communications/networking, cyber-physical systems or Internet of Things (IoT) prototype, and AI-native design
+      of mobile and wireless networks. Dr. Wang received NSF CAREER Award in 2006. She is an ACM member and an IEEE
+      Fellow.
     </p>
   </div>
 
@@ -30,12 +31,6 @@
       circumstances, it is possible to design algorithms, protocols, and architectures that enable a wireless network to
       have robust architecture and topology and high performance for diversified applications and large-scale distributed,
       intelligent systems.
-    </p>
-    <p>
-      Our lab members include undergraduate students who gain their experience in research and prepare for their graduate
-      study, and graduate students who aim to make novel contributions to wireless networking area. Currently, we are
-      focused on the issues like mobile clouds, vehicle-to-vehicle communications, wireless in the Smart Grid from the
-      perspective of network resilience and performance in the presence of failures and abnormality.
     </p>
   </div>
 

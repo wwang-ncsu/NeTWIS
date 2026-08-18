@@ -11,7 +11,10 @@ function pubs_load_all(): array {
     $p['selected'] = !empty($p['selected']);
     $link = trim((string)($p['link'] ?? ''));
     $p['link'] = $link;
-    $p['has_pdf'] = $link !== '' && is_file(__DIR__ . '/../' . $link);
+    $p['has_pdf'] = $link !== '' && (
+      preg_match('~^https?://~i', $link) === 1 ||
+      is_file(__DIR__ . '/../' . $link)
+    );
   }
   unset($p);
   
