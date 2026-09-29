@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2026-07-28 11:32:00 -->
+<!-- 2026-09-29 21:40:18 -->
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,13 +33,11 @@
   </style>
 </head>
 <body>
-  <iframe id="viewer" title="PDF viewer" hidden></iframe>
   <div id="message" class="message" hidden></div>
   <script>
     (function () {
       const params = new URLSearchParams(window.location.search);
       const file = params.get("file");
-      const viewer = document.getElementById("viewer");
       const message = document.getElementById("message");
 
       if (!file) {
@@ -67,10 +65,31 @@
         return;
       }
 
-      const pdfJsViewer = "https://mozilla.github.io/pdf.js/web/viewer.html?file=" + encodeURIComponent(fileUrl.toString());
-      viewer.src = pdfJsViewer;
-      viewer.hidden = false;
-      document.title = decodeURIComponent(fileUrl.pathname.split("/").pop() || "PDF Viewer");
+      // Compatibility for bookmarked viewer URLs; new pages link to PDFs directly.
+      const prefix = "/wwang-ncsu/NeTWIS/main/papers/";
+      const pathname = decodeURIComponent(fileUrl.pathname);
+      const originalName = pathname.slice(prefix.length);
+      if (!pathname.startsWith(prefix) || !/^[^/\\]+\.pdf$/i.test(originalName)) {
+        message.hidden = false;
+        message.textContent = "The PDF link is invalid.";
+        return;
+      }
+      const renamedPdfs = {
+        "25ML-Synergizing_Acoustic_and_Wi-Fi_Signals_for_Device-Free_Gesture_Recognition.pdf": "25lw-synergizing.pdf",
+        "26ML-DuTrack.pdf": "26lw-dutrack.pdf",
+        "26ML-UNI-FI.pdf": "26lw-uni-fi.pdf",
+        "26-SWAMP-MOBICOM-submitted.pdf": "26lfw-swamp.pdf",
+        "10185834.pdf": "20hme-prevention.pdf"
+};
+      const filename = Object.prototype.hasOwnProperty.call(renamedPdfs, originalName)
+        ? renamedPdfs[originalName] : originalName;
+      const pdfUrl = new URL("papers/" + encodeURIComponent(filename), window.location.href);
+      message.hidden = false;
+      const link = document.createElement("a");
+      link.href = pdfUrl.href;
+      link.textContent = "Open PDF";
+      message.appendChild(link);
+      window.location.replace(pdfUrl.href);
     })();
   </script>
 </body>

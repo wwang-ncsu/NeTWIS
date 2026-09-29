@@ -15,9 +15,10 @@ RENAME_REPORT = ROOT / "docs" / "publication_pdf_rename_map.csv"
 EXTRA_RENAME_REPORT = ROOT / "docs" / "unnamed_pdf_rename_map.csv"
 
 DIRECT_TITLE_MATCHES = {
-    "synergizing acoustic and wi-fi signals for device-free gesture recognition": "25ML-Synergizing_Acoustic_and_Wi-Fi_Signals_for_Device-Free_Gesture_Recognition.pdf",
-    "dutrack: long-term indoor human tracking with dual-channel sensing and inference": "26ML-DuTrack.pdf",
-    "uni-fi: integrated multi-task wi-fi sensing": "26ML-UNI-FI.pdf",
+    "paths: plug-and-play tracking from heterogeneous streams to a shared token interface": "26lw-paths.pdf",
+    "synergizing acoustic and wi-fi signals for device-free gesture recognition": "25lw-synergizing.pdf",
+    "dutrack: long-term indoor human tracking with dual-channel sensing and inference": "26lw-dutrack.pdf",
+    "uni-fi: integrated multi-task wi-fi sensing": "26lw-uni-fi.pdf",
 }
 
 

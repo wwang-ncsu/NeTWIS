@@ -7,9 +7,8 @@ class PHPStaticGeneratorImproved {
     private $baseUrl;
     private $singleInputFile = null;
     private $inputDisplayPath;
-    private $excludedStaticDirs = ['papers'];
-    private $papersRawBaseUrl = 'https://raw.githubusercontent.com/wwang-ncsu/NeTWIS/main/papers/';
-    private $papersViewerPath = 'pdf-viewer.html?file=';
+    // Publish PDFs alongside the HTML so crawlers can follow ordinary links.
+    private $excludedStaticDirs = [];
     private $phpExtensions = ['.php', '.html', '.htm'];
     private $staticExtensions = ['.css', '.js', '.png', '.jpg', '.jpeg', '.gif', 
                                 '.svg', '.ico', '.woff', '.woff2', '.ttf', '.eot',
@@ -322,16 +321,7 @@ try {
     
     
     private function processHtmlContent($content, $currentPath) {
-        $content = preg_replace_callback(
-            '/(href\s*=\s*["\'])papers\/([^"\']+\.pdf)(["\'])/i',
-            function($matches) {
-                $pdfUrl = $this->papersRawBaseUrl . $matches[2];
-                $viewerUrl = $this->papersViewerPath . rawurlencode($pdfUrl);
-                return $matches[1] . $viewerUrl . $matches[3];
-            },
-            $content
-        );
-        
+        // Keep relative papers/*.pdf links intact, including on project sites.
         
         $content = preg_replace('/href\s*=\s*["\']http:\/\/localhost(?::\d+)?([^"\']*)["\']/', 'href="$1"', $content);
         $content = preg_replace('/src\s*=\s*["\']http:\/\/localhost(?::\d+)?([^"\']*)["\']/', 'src="$1"', $content);

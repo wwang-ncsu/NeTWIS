@@ -11,10 +11,12 @@ function pubs_load_all(): array {
     $p['selected'] = !empty($p['selected']);
     $link = trim((string)($p['link'] ?? ''));
     $p['link'] = $link;
-    $p['has_pdf'] = $link !== '' && (
+    $p['has_link'] = $link !== '' && (
       preg_match('~^https?://~i', $link) === 1 ||
       is_file(__DIR__ . '/../' . $link)
     );
+    $p['has_pdf'] = $p['has_link'] &&
+      preg_match('~\.pdf(?:[?#]|$)~i', $link) === 1;
   }
   unset($p);
   
@@ -89,9 +91,10 @@ function pubs_render_paragraphs(array $pubs, string $prefix = 'P'): string {
     $venue = htmlspecialchars(pubs_clean_text((string)$p['venue']));
     $extra = trim($p['extra'] ?? '');
     $doc = '';
-    if (!empty($p['has_pdf'])) {
+    if (!empty($p['has_link'])) {
       $url = htmlspecialchars($p['link']);
-      $doc = " <span class=\"publication-doc\"><a href=\"{$url}\" target=\"blank\"> pdf </a></span>";
+      $linkLabel = !empty($p['has_pdf']) ? 'pdf' : 'link';
+      $doc = " <span class=\"publication-doc\"><a href=\"{$url}\" target=\"_blank\" rel=\"noopener\"> {$linkLabel} </a></span>";
     } else {
       $doc = " <span class=\"publication-doc publication-doc--missing\"> pdf </span>";
     }
