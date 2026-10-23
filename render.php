@@ -186,6 +186,13 @@ class PHPStaticGeneratorImproved {
     
     
     private function processPhpFile($relativePath) {
+        // Preserve Google's ownership verification file without HTML transformations.
+        if (preg_match('/^google[a-f0-9]+\.html$/', basename($relativePath))) {
+            $sourceFile = $this->sourceDir . DIRECTORY_SEPARATOR . $relativePath;
+            $this->saveHtmlFile(file_get_contents($sourceFile), $relativePath);
+            return;
+        }
+
         echo "process: $relativePath\n";
         
         $sourceFile = $this->sourceDir . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $relativePath);
